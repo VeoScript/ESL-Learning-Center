@@ -17,9 +17,10 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Scope+One|Trocchi");
 @import url("https://fonts.googleapis.com/css?family=Varela+Round");
 @import url("https://fonts.googleapis.com/css?family=Righteous");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 #app {
-  font-family: 'Righteous';
+  font-family: 'Nunito';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
