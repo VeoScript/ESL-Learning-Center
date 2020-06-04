@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <navbar></navbar>
+    <topbar/>
     <router-view />
   </div>
 </template>
@@ -8,29 +8,27 @@
 <script>
 export default {
   components: {
-    navbar: () => import('@/components/Navbar.vue')
+    Topbar: () => import('@/components/Topbar.vue')
   }
 }
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Scope+One|Trocchi");
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+@import url("https://fonts.googleapis.com/css?family=Righteous");
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Righteous';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+h1, h2, h3, h4, h5, h6, p, i, span, li{
+  cursor: default;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body{
+  background: #DEF2F1;
 }
 </style>

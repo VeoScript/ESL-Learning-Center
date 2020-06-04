@@ -1,7 +1,9 @@
 <template>
-  <div class="home">
-    <carousel></carousel>
-    <displaycards></displaycards>
+  <div>
+    <carousel/>
+    <tabs/>
+    <horizontal-cards/>
+    <footer-component/>
   </div>
 </template>
 
@@ -9,9 +11,11 @@
 
 export default {
   name: "Home",
-  components:{   
-    carousel: () => import('@/components/Carousel.vue'),
-    displaycards: () => import('@/components/DisplayCards.vue')
+  components:{  
+    Carousel: () => import('@/components/Carousel.vue'),
+    Tabs: () => import('@/components/Tabs.vue'),
+    HorizontalCards: () => import('@/components/HorizontalCards.vue'),
+    FooterComponent: () => import('@/components/FooterComponent.vue')
   }
 };
 </script>
