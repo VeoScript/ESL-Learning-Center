@@ -6,7 +6,7 @@
           <b-tabs content-class="mt-4" class="p-0" align="center">
             <b-tab title="VISION">
               <p id="txtvision">
-                Stand out in delivering sustainable and holistic English
+                <em class="quote">“</em> Stand out in delivering sustainable and holistic English
                 Language learning,<br />
                 able students to speak up in higher order thinking skills at
                 multicultural level.<br />
@@ -16,7 +16,7 @@
             </b-tab>
             <b-tab title="MISSION">
               <p id="txtmission">
-                We victors the dream and make globally competitive learners and
+               <em class="quote">“</em> We victors the dream and make globally competitive learners and
                 professionals.<br />
                 Unleash the breakthrough English literacy for young learners<br />with
                 the most authentic teaching approach.<br />
@@ -38,10 +38,18 @@
 #txtvision {
   font-size: 20px;
   padding: 20px;
+  font-style: italic;
 }
 
 #txtmission {
   font-size: 20px;
   padding: 20px;
+  font-style: italic;
+}
+.quote {
+  font-size: 90px;
+  position: absolute;
+  left: 20px;
+  top: 90px;
 }
 </style>
