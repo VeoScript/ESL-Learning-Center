@@ -14,3 +14,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .about{
+    margin-top: 50px;
+  }
+</style>
