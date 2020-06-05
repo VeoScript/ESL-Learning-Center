@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <b-sidebar id="sidebar-right" title="Menu" right shadow>
+    <b-sidebar id="sidebar-right" title="Menu" right shadow backdrop backdrop-variant="transparent">
       <b-list-group id="list-group">
         <b-list-group-item to="/">Home</b-list-group-item>
         <b-list-group-item to="/about">About</b-list-group-item>
