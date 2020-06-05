@@ -1,14 +1,16 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <tabs></tabs>
+    <!-- <b-container>
+      <tabs></tabs>
+    </b-container> -->
   </div>
 </template>
 
 <script>
 export default {
   components: {
-    Tabs: () => import("@/components/Tabs.vue")
+    //Tabs: () => import("@/components/Tabs.vue")
   }
 }
 </script>

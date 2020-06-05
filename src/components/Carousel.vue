@@ -2,13 +2,14 @@
   <div>
     <b-carousel
       id="carousel-1"
-      :interval="4000"
       controls
       indicators
       background="#ababab"
       img-width="1024"
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
+      sliding-start="onSlideStart"
+      sliding-end="onSlideEnd"
     >
       <b-carousel-slide>
         <template v-slot:img>
@@ -18,7 +19,7 @@
             height="300"
             src="@/assets/photos/vic1.png"
             alt="image slot"
-          >
+          />
         </template>
       </b-carousel-slide>
 
@@ -30,7 +31,7 @@
             height="300"
             src="@/assets/photos/vic2.png"
             alt="image slot"
-          >
+          />
         </template>
       </b-carousel-slide>
     </b-carousel>
@@ -38,7 +39,7 @@
 </template>
 
 <style>
-  .carousel{
-    margin-top: 55px;
-  }
+.carousel {
+  margin-top: 55px;
+}
 </style>
