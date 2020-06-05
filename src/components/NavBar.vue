@@ -32,7 +32,7 @@ export default {
 
 .navbar {
   background: #fff;
-  box-shadow: 1px 1px 1px #333;
+  border-bottom: 1px solid rgb(218, 217, 217);
 
   .navbar-brand {
     font-family: #fff;
