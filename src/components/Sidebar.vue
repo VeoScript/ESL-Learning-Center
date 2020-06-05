@@ -1,17 +1,30 @@
-
 <template>
   <div>
-    <b-sidebar id="sidebar-right" title="Menu" right shadow backdrop backdrop-variant="transparent">
+    <b-sidebar id="sidebar-right" title="Menu" right shadow backdrop-variant="transparent">
       <b-list-group id="list-group">
-        <b-list-group-item to="/">Home</b-list-group-item>
-        <b-list-group-item to="/about">About</b-list-group-item>
-        <b-list-group-item to="/about">Lessons</b-list-group-item>
-        <b-list-group-item to="/about">Teachers</b-list-group-item>
-        <b-list-group-item to="/about">Contacts</b-list-group-item>
-        <b-list-group-item>
+        <b-list-group-item to="/" id="text-style">
+          <b-icon id="icon" icon="house-fill"></b-icon> Home
+        </b-list-group-item>
+        <b-list-group-item to="/about">
+          <b-icon id="icon" icon="person-square"></b-icon> About
+        </b-list-group-item>
+        <b-list-group-item to="/about">
+          <b-icon id="icon" icon="grid1x2-fill"></b-icon> Lessons
+        </b-list-group-item>
+        <b-list-group-item to="/about">
+          <b-icon id="icon" icon="person-bounding-box"></b-icon> Teachers
+        </b-list-group-item>
+        <b-list-group-item to="/about">
+          <b-icon id="icon" icon="person-lines-fill"></b-icon> Contacts
+        </b-list-group-item>
+        <b-list-group-item class="d-flex justify-content-center">
           <b-button-group size="sm">
-            <b-button>Register</b-button>
-            <b-button>Login</b-button>
+            <b-button class="defaultstyle">
+              <b-icon id="icon" icon="person-plus-fill"></b-icon> Signup
+            </b-button>
+            <b-button class="defaultstyle">
+              <b-icon id="icon" icon="person-circle"></b-icon> Login
+            </b-button>
           </b-button-group>
         </b-list-group-item>
       </b-list-group>
@@ -30,5 +43,20 @@ export default {};
 <style scoped>
 #list-group {
   border-radius: 0;
+  font-weight: bolder !important;
+}
+#icon {
+  font-weight: bolder !important;
+}
+
+.defaultstyle {
+  border: 1px solid teal;
+  background-color: #fff;
+  color: teal;
+}
+.defaultstyle:focus {
+  box-shadow: none;
+  background: teal;
+  color: white;
 }
 </style>

@@ -1,16 +1,16 @@
 <template>
   <div class="fixed-top top">
-    <b-navbar variant="fade" type="light">
-      <b-navbar-brand route to="/" class="mb-0">
-        Victor Solutions
-      </b-navbar-brand>
-      <b-navbar-nav class="ml-auto">
-        <b-button v-b-toggle.sidebar-right id="menuicon"
-          ><b-icon icon="list" /></b-button
-        >
-        <sidebar/>
-      </b-navbar-nav>
-    </b-navbar>
+  <b-navbar variant="fade" type="light">
+    <b-navbar-brand route to="/" class="mb-0">
+      Victor Solutions
+    </b-navbar-brand>
+    <b-navbar-nav class="ml-auto">
+      <b-button v-b-toggle.sidebar-right id="menuicon"
+        ><b-icon icon="list" /></b-button
+      >
+      <side-bar />
+    </b-navbar-nav>
+  </b-navbar>
   </div>
 </template>
 
@@ -18,7 +18,7 @@
 export default {
   name: "Navbar",
   components: {
-    Sidebar: () => import('@/components/Sidebar.vue')
+    SideBar: () => import("@/components/SideBar.vue")
   }
 };
 </script>
