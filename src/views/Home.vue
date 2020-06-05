@@ -1,8 +1,10 @@
 <template>
   <div>
     <carousel/>
-    <tabs/>
-    <horizontal-cards/>
+    <b-container>
+      <tabs/>
+      <horizontal-cards/>
+    </b-container>
     <footer-component/>
   </div>
 </template>
