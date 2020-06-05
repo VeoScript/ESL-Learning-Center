@@ -3,7 +3,7 @@
     <b-row class="justify-content-center">
       <b-col sm="11">
         <b-card title="The Company" class="text-center">
-          <b-tabs content-class="mt-4" align="center">
+          <b-tabs content-class="mt-4" class="p-0" align="center">
             <b-tab title="VISION">
               <p id="txtvision">
                 Stand out in delivering sustainable and holistic English

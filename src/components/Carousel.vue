@@ -2,7 +2,6 @@
   <div>
     <b-carousel
       id="carousel-1"
-      :interval="4000"
       controls
       indicators
       background="#ababab"
@@ -20,7 +19,7 @@
             height="300"
             src="@/assets/photos/vic1.png"
             alt="image slot"
-          >
+          />
         </template>
       </b-carousel-slide>
 
@@ -32,7 +31,7 @@
             height="300"
             src="@/assets/photos/vic2.png"
             alt="image slot"
-          >
+          />
         </template>
       </b-carousel-slide>
     </b-carousel>
@@ -41,7 +40,7 @@
 
 
 <style>
-  .carousel{
-    margin-top: 55px;
-  }
+.carousel {
+  margin-top: 55px;
+}
 </style>
