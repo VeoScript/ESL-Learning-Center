@@ -36,7 +36,8 @@ export default {
   border-bottom: 1px solid rgb(218, 217, 217);
 
   .navbar-brand {
-    font-family: #fff;
+    font-family: 'Righteous';
+    color: #445b66;
   }
 }
 </style>

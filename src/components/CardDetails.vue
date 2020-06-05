@@ -1,7 +1,7 @@
 <template>
   <div class="p-2">
     <b-row class="justify-content-center">
-      <b-col sm="11">
+      <b-col sm="12">
         <b-card no-body class="overflow-hidden">
           <b-row no-gutters>
             <b-col sm="3">
@@ -11,6 +11,11 @@
                   Advance Learning through PDF. We provide it for you.
                 </b-card-text>
                 <b-button>Get Yours Now</b-button>
+                <hr />
+                <b-card-text>
+                  Proceed to Lessons?
+                </b-card-text>
+                <b-button>Lessons</b-button>
               </b-card-body>
             </b-col>
             <b-col sm="3">
@@ -78,8 +83,8 @@
 
 <style lang="scss">
 #box1 {
-  background: #3aafa9;
-  color: #17242a;
+  background: #17242a;
+  color: #6cc4c5;
   height: 430px;
 
   .card-text {
