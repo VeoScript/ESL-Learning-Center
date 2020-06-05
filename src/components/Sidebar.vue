@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-sidebar id="sidebar-right" title="Menu" right shadow backdrop-variant="transparent">
+    <b-sidebar id="sidebar-right" title="Menu" right shadow backdrop backdrop-variant="transparent">
       <b-list-group id="list-group">
         <b-list-group-item to="/" id="text-style">
           <b-icon id="icon" icon="house-fill"></b-icon> Home
@@ -20,7 +20,7 @@
         <b-list-group-item class="d-flex justify-content-center">
           <b-button-group size="sm">
             <b-button class="defaultstyle">
-              <b-icon id="icon" icon="person-plus-fill"></b-icon> Signup
+              <b-icon id="icon" icon="person-plus-fill"></b-icon> Register
             </b-button>
             <b-button class="defaultstyle">
               <b-icon id="icon" icon="person-circle"></b-icon> Login
@@ -37,7 +37,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'SideBar'
+};
 </script>
 
 <style scoped>
