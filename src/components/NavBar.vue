@@ -6,7 +6,7 @@
       </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-button v-b-toggle.sidebar-right id="menuicon"
-          ><b-icon icon="list" />&nbsp;MENU</b-button
+          ><b-icon icon="list" /></b-button
         >
         <side-bar/>
       </b-navbar-nav>
@@ -26,13 +26,14 @@ export default {
 <style lang="scss">
 #menuicon {
   background: none;
-  color: #333;
-  font-size: 12px;
+  border: 1px solid rgb(221, 221, 221);
+  color: rgb(139, 139, 139);
+  font-size: 15px;
 }
 
 .navbar {
   background: #fff;
-  box-shadow: 1px 1px 1px #333;
+  border-bottom: 1px solid rgb(218, 217, 217);
 
   .navbar-brand {
     font-family: #fff;
