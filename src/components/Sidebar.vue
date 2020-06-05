@@ -3,9 +3,7 @@
   <div>
     <b-sidebar id="sidebar-right" title="Menu" right shadow>
       <b-list-group id="list-group">
-        <b-list-group-item to="/">
-          <b-icon icon="archive"></b-icon> Home
-        </b-list-group-item>
+        <b-list-group-item to="/">Home</b-list-group-item>
         <b-list-group-item to="/about">About</b-list-group-item>
         <b-list-group-item to="/about">Lessons</b-list-group-item>
         <b-list-group-item to="/about">Teachers</b-list-group-item>
