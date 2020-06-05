@@ -3,10 +3,10 @@
     <b-sidebar id="sidebar-right" title="Menu" right shadow backdrop>
       <b-list-group id="list-group">
         <b-list-group-item to="/">Home</b-list-group-item>
-        <b-list-group-item to="/About">About</b-list-group-item>
-        <b-list-group-item to="/About">Lessons</b-list-group-item>
-        <b-list-group-item to="/About">Teachers</b-list-group-item>
-        <b-list-group-item to="/About">Contacts</b-list-group-item>
+        <b-list-group-item to="/about">About</b-list-group-item>
+        <b-list-group-item to="/about">Lessons</b-list-group-item>
+        <b-list-group-item to="/about">Teachers</b-list-group-item>
+        <b-list-group-item to="/about">Contacts</b-list-group-item>
         <b-list-group-item>
           <b-button-group size="sm">
             <b-button>Register</b-button>
@@ -15,7 +15,7 @@
         </b-list-group-item>
       </b-list-group>
       <p class="copyright mx-2 my-2">
-        &copy;2020 Victor Air Class Solutions, Inc. / All Rights Reserved.<br>
+        &copy;2020 Victor Air Class Solutions, Inc. / All Rights Reserved.<br />
         Designed and Developed by VEOSCRIPT and ACATZK.
       </p>
     </b-sidebar>
@@ -23,13 +23,11 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-  #list-group{
-    border-radius: 0;
-  }
+#list-group {
+  border-radius: 0;
+}
 </style>

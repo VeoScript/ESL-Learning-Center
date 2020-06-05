@@ -5,8 +5,10 @@
         Victor Solutions
       </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <b-button v-b-toggle.sidebar-right id="menuicon"><b-icon icon="list"/>&nbsp;MENU</b-button>
-        <sidebar/>
+        <b-button v-b-toggle.sidebar-right id="menuicon"
+          ><b-icon icon="list" />&nbsp;MENU</b-button
+        >
+        <sidebar />
       </b-navbar-nav>
     </b-navbar>
   </div>
@@ -14,26 +16,26 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: "Navbar",
   components: {
-    Sidebar: () => import('@/components/Sidebar.vue')
+    Sidebar: () => import("@/components/Sidebar.vue")
   }
-}
+};
 </script>
 
 <style lang="scss">
-  #menuicon{
-    background: none;
-    color: #333;
-    font-size: 12px;
-  }
+#menuicon {
+  background: none;
+  color: #333;
+  font-size: 12px;
+}
 
-  .navbar{
-    background: #fff;
-    box-shadow: 1px 1px 1px #333;
+.navbar {
+  background: #fff;
+  box-shadow: 1px 1px 1px #333;
 
-    .navbar-brand{
-      font-family: #fff;
-    }
+  .navbar-brand {
+    font-family: #fff;
   }
+}
 </style>

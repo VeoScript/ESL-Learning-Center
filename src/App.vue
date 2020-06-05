@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <topbar/>
+    <topbar />
     <router-view />
   </div>
 </template>
@@ -8,9 +8,9 @@
 <script>
 export default {
   components: {
-    Topbar: () => import('@/components/Topbar.vue')
+    Topbar: () => import("@/components/Topbar.vue")
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -20,16 +20,25 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 #app {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6, p, i, span, li{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+i,
+span,
+li {
   cursor: default;
 }
 
-body{
-  background: #DEF2F1;
+body {
+  background: #def2f1;
 }
 </style>
