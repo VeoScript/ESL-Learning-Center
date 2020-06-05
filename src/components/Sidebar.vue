@@ -20,7 +20,7 @@
         <b-list-group-item class="d-flex justify-content-center">
           <b-button-group size="sm">
             <b-button class="defaultstyle">
-              <b-icon id="icon" icon="person-plus-fill"></b-icon> Signup
+              <b-icon id="icon" icon="person-plus-fill"></b-icon> Register
             </b-button>
             <b-button class="defaultstyle">
               <b-icon id="icon" icon="person-circle"></b-icon> Login
