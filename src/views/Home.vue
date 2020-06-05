@@ -3,7 +3,7 @@
     <carousel />
     <b-container>
       <tabs />
-      <horizontal-cards />
+      <card-details />
     </b-container>
     <foot-bar />
   </div>
@@ -15,7 +15,7 @@ export default {
   components: {
     Carousel: () => import("@/components/Carousel.vue"),
     Tabs: () => import("@/components/Tabs.vue"),
-    HorizontalCards: () => import("@/components/HorizontalCards.vue"),
+    CardDetails: () => import("@/components/CardDetails.vue"),
     FootBar: () => import("@/components/FootBar.vue")
   }
 };
