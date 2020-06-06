@@ -1,32 +1,31 @@
 <template>
-    <div class="fixed-top top">
-      <b-container>
-        <b-navbar variant="fade">
-          <b-navbar-brand route to="/">
-            Victor Solutions
-          </b-navbar-brand>
-          <b-navbar-nav class="ml-auto">
-            <b-button v-b-toggle.sidebar-right id="menuicon"
-              ><b-icon icon="list" /></b-button
-            >
-            <sidebar />
-          </b-navbar-nav>
-        </b-navbar>
-      </b-container>
-    </div>
+  <div class="fixed-top top">
+    <b-container>
+      <b-navbar variant="fade">
+        <b-navbar-brand route to="/">
+          Victor Solutions
+        </b-navbar-brand>
+        <b-navbar-nav class="ml-auto">
+          <b-button v-b-toggle.sidebar-right id="menuicon"
+            ><b-icon icon="list"
+          /></b-button>
+          <sidebar />
+        </b-navbar-nav>
+      </b-navbar>
+    </b-container>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Navbar",
   components: {
-    Sidebar: () => import('@/components/Sidebar.vue')
+    Sidebar: () => import("@/components/Sidebar.vue")
   }
-}
+};
 </script>
 
 <style lang="scss">
-
 .top {
   background: #fff;
   border-bottom: 1px solid rgb(218, 217, 217);
@@ -43,7 +42,7 @@ export default {
   background: #fff;
 
   .navbar-brand {
-    font-family: 'Righteous';
+    font-family: "Righteous";
     color: #445b66;
   }
 }

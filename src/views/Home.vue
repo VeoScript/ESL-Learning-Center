@@ -17,8 +17,8 @@ export default {
     Tabs: () => import("@/components/Tabs.vue"),
     FootBar: () => import("@/components/FootBar.vue"),
     CardDetailsOwner: () => import("@/components/CardDetailsOwner.vue"),
-    CardDetails: () => import('@/components/CardDetails'),
-    Hero: () => import('@/components/Hero.vue')
+    CardDetails: () => import("@/components/CardDetails"),
+    Hero: () => import("@/components/Hero.vue")
   }
 };
 </script>

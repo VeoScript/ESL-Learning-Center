@@ -37,7 +37,6 @@
   </div>
 </template>
 
-
 <style>
 .carousel {
   margin-top: 55px;
