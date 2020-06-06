@@ -50,7 +50,7 @@
           to="/login"
           :class="$route.path === '/login' ? 'active' : ''"
         >
-          <b-icon icon="person"></b-icon> Login
+          <b-icon icon="file-richtext"></b-icon> Login
         </b-list-group-item>
         <!-- <b-list-group-item class="d-flex justify-content-center align-items-center business-logo">
             <b-img fluid src="@/assets/photos/logo.png" width="100"></b-img>
