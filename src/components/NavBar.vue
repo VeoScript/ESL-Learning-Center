@@ -1,17 +1,19 @@
 <template>
-  <div class="fixed-top top">
-  <b-navbar variant="fade" type="light">
-    <b-navbar-brand route to="/" class="mb-0">
-      Victor Solutions
-    </b-navbar-brand>
-    <b-navbar-nav class="ml-auto">
-      <b-button v-b-toggle.sidebar-right id="menuicon"
-        ><b-icon icon="list" /></b-button
-      >
-      <sidebar />
-    </b-navbar-nav>
-  </b-navbar>
-  </div>
+    <div class="fixed-top top">
+      <b-container>
+        <b-navbar variant="fade">
+          <b-navbar-brand route to="/">
+            Victor Solutions
+          </b-navbar-brand>
+          <b-navbar-nav class="ml-auto">
+            <b-button v-b-toggle.sidebar-right id="menuicon"
+              ><b-icon icon="list" /></b-button
+            >
+            <sidebar />
+          </b-navbar-nav>
+        </b-navbar>
+      </b-container>
+    </div>
 </template>
 
 <script>
@@ -24,6 +26,12 @@ export default {
 </script>
 
 <style lang="scss">
+
+.top {
+  background: #fff;
+  border-bottom: 1px solid rgb(218, 217, 217);
+}
+
 #menuicon {
   background: none;
   border: 1px solid rgb(221, 221, 221);
@@ -33,7 +41,6 @@ export default {
 
 .navbar {
   background: #fff;
-  border-bottom: 1px solid rgb(218, 217, 217);
 
   .navbar-brand {
     font-family: 'Righteous';
