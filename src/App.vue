@@ -43,6 +43,6 @@ li {
 }
 
 body {
-  background: #def2f1;
+  background: rgba(227, 245, 245, 0.467);
 }
 </style>
