@@ -1,10 +1,8 @@
 <template>
   <div>
     <carousel />
-    <b-container>
-      <tabs />
-      <card-details-owner />
-    </b-container>
+    <tabs />
+    <card-details-owner />
     <foot-bar />
   </div>
 </template>
