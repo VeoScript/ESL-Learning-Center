@@ -28,4 +28,19 @@ const router = new VueRouter({
   routes
 });
 
+
+router.beforeResolve((to, from, next) => {
+  // If this isn't an initial page load.
+  NProgress.configure({ easing: 'ease', speed: 2000, showSpinner: false })
+  if (to.name) {
+    NProgress.start()
+  }
+  next()
+})
+
+router.afterEach((to, from) => {
+  // Complete the animation of the route progress bar.
+  NProgress.done()
+})
+
 export default router;
