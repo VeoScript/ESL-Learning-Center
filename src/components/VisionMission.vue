@@ -35,4 +35,8 @@
     margin-top: 50px;
     background: white;
   }
+  .card {
+      background: none;
+      border: none;
+  }
 </style>
