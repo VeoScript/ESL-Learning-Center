@@ -30,13 +30,17 @@
   </b-container>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .carddetails{
     margin-top: 50px;
     background: white;
   }
+  p {
+      line-height: 2.20;
+  }
   .card {
       background: none;
       border: none;
+      padding: 20px;
   }
 </style>
