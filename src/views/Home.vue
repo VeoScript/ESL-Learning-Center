@@ -2,7 +2,8 @@
   <div>
     <!-- <carousel /> -->
     <Hero />
-    <tabs />
+    <!-- <tabs /> -->
+    <vision-mission />
     <card-details-owner />
     <card-details />
     <foot-bar />
@@ -14,7 +15,8 @@ export default {
   name: "Home",
   components: {
     // Carousel: () => import("@/components/Carousel.vue"),
-    Tabs: () => import("@/components/Tabs.vue"),
+    // Tabs: () => import("@/components/Tabs.vue"),
+    VisionMission: () => import('@/components/VisionMission.vue'),
     FootBar: () => import("@/components/FootBar.vue"),
     CardDetailsOwner: () => import("@/components/CardDetailsOwner.vue"),
     CardDetails: () => import("@/components/CardDetails"),
