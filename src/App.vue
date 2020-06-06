@@ -43,10 +43,6 @@ li {
 }
 
 body {
-  background: #EFF7F8;
-}
-
-.card{
-  border: none;
+  background: rgba(227, 245, 245, 0.467);
 }
 </style>
