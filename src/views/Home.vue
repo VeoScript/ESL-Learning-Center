@@ -2,9 +2,9 @@
   <div>
     <carousel />
     <b-container>
-      <tabs />
       <card-details />
-      <card-details-owner />
+      <card-details-owner /> 
+      <!-- <tabs />-->
     </b-container>
     <foot-bar />
   </div>
@@ -12,10 +12,10 @@
 
 <script>
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     Carousel: () => import("@/components/Carousel.vue"),
-    Tabs: () => import("@/components/Tabs.vue"),
+    // Tabs: () => import("@/components/Tabs.vue"),
     CardDetails: () => import("@/components/CardDetails.vue"),
     FootBar: () => import("@/components/FootBar.vue"),
     CardDetailsOwner: () => import("@/components/CardDetailsOwner.vue")

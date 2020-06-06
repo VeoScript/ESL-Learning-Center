@@ -1,15 +1,26 @@
 <template>
   <div class="fixed-top top">
-  <b-navbar variant="fade" type="light">
+  <b-navbar toggleable="lg" variant="fade" type="light">
     <b-navbar-brand route to="/" class="mb-0">
-      Victor Solutions
+      <img src="@/assets/photos/logo.png" height="30" alt="Vic Solutions">
     </b-navbar-brand>
-    <b-navbar-nav class="ml-auto">
-      <b-button v-b-toggle.sidebar-right id="menuicon"
-        ><b-icon icon="list" /></b-button
-      >
-      <sidebar />
-    </b-navbar-nav>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+        <b-navbar-nav>
+          <b-nav-item href="#">Home <span class="sr-only">(current)</span></b-nav-item>
+          <b-nav-item href="#">About <span class="sr-only"></span></b-nav-item>
+          <b-nav-item href="#">Lessons <span class="sr-only"></span></b-nav-item>
+          <b-nav-item href="#">Teachers <span class="sr-only"></span></b-nav-item>
+        </b-navbar-nav>
+      </b-navbar-nav>
+      <b-navbar-nav class="ml-auto">
+        <b-navbar-nav>
+          <b-nav-item href="#">Login <span class="sr-only"></span></b-nav-item>
+          <b-button>Register</b-button>
+        </b-navbar-nav>
+      </b-navbar-nav>
+    </b-collapse>
   </b-navbar>
   </div>
 </template>
@@ -18,7 +29,7 @@
 export default {
   name: "Navbar",
   components: {
-    Sidebar: () => import('@/components/Sidebar.vue')
+    
   }
 }
 </script>

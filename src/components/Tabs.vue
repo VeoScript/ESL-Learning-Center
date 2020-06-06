@@ -1,5 +1,5 @@
 <template>
-  <div class="p-2">
+  <div class="p-2 tabcom">
     <b-row class="justify-content-center">
       <b-col sm="12">
         <b-card title="The Company" class="text-center">
@@ -33,6 +33,10 @@
 </template>
 
 <style lang="scss">
+// .tabcom{
+//   height: 100vh;
+// }
+
 blockquote {
     font-family: 'Lobster Two';
     font-size: 25px;
