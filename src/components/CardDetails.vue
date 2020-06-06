@@ -1,5 +1,6 @@
 <template>
-  <div class="p-2">
+  <div class="p-2 card-details">
+    <b-container>
     <b-row class="justify-content-center">
       <b-col sm="12">
         <b-card no-body class="overflow-hidden">
@@ -78,38 +79,48 @@
         </b-card>
       </b-col>
     </b-row>
+   </b-container>
   </div>
 </template>
 
 <style lang="scss">
+
+.card-details {
+  background: white;
+}
+
 #box1 {
-  background: #17242a;
-  color: #6cc4c5;
+  // background: #17242a;
+  // color: #6cc4c5;
+  border: 1px solid #eee;
   height: 430px;
 
   .card-text {
-    color: #fff;
+    color: teal;
   }
 }
 
 #box2 {
-  background: #2b7a77;
-  color: #fff;
+  // background: #2b7a77;
+  color: teal;
   height: 430px;
 
+
   .card-text {
-    color: #e2e2e2;
+    color:teal;
     font-size: 14px;
   }
 }
 
 #box3 {
-  background: #17242a;
-  color: #6cc4c5;
+  // background: #17242a;
+  // color: #6cc4c5;
   height: 430px;
+  border: 1px solid #eee;
+
 
   .card-text {
-    color: #fff;
+    color: teal;
   }
 }
 </style>
