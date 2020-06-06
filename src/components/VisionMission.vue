@@ -4,7 +4,7 @@
       <b-row>
         <b-col sm="6">
           <b-card-body>
-            <h1>VISION</h1>
+            <h1><b-icon icon="brightness-high-fill"></b-icon> VISION</h1>
             <p>
               Stand out in delivering sustainable and holistic English Language learning,
               able students to speak up in higher order thinking skills at multicultural level.
@@ -14,7 +14,7 @@
         </b-col>
         <b-col sm="6">
           <b-card-body>
-            <h1>MISSION</h1>
+            <h1><b-icon icon="brightness-high"></b-icon> MISSION</h1>
             <p>
               We victors the dream and make globally competitive learners and professionals.
               Unleash the breakthrough English literacy for young learners
@@ -33,5 +33,6 @@
 <style lang="scss">
   .carddetails{
     margin-top: 50px;
+    background: white;
   }
 </style>
