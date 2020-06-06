@@ -1,8 +1,10 @@
 <template>
   <div>
-    <carousel />
+    <!-- <carousel /> -->
+    <Hero />
     <tabs />
     <card-details-owner />
+    <card-details />
     <foot-bar />
   </div>
 </template>
@@ -11,10 +13,12 @@
 export default {
   name: "Home",
   components: {
-    Carousel: () => import("@/components/Carousel.vue"),
+    // Carousel: () => import("@/components/Carousel.vue"),
     Tabs: () => import("@/components/Tabs.vue"),
     FootBar: () => import("@/components/FootBar.vue"),
-    CardDetailsOwner: () => import("@/components/CardDetailsOwner.vue")
+    CardDetailsOwner: () => import("@/components/CardDetailsOwner.vue"),
+    CardDetails: () => import('@/components/CardDetails'),
+    Hero: () => import('@/components/Hero.vue')
   }
 };
 </script>
