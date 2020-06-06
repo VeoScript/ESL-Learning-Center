@@ -8,7 +8,7 @@
       <b-button v-b-toggle.sidebar-right id="menuicon"
         ><b-icon icon="list" /></b-button
       >
-      <side-bar />
+      <sidebar />
     </b-navbar-nav>
   </b-navbar>
   </div>
@@ -18,9 +18,9 @@
 export default {
   name: "Navbar",
   components: {
-    SideBar: () => import("@/components/SideBar.vue")
+    Sidebar: () => import('@/components/Sidebar.vue')
   }
-};
+}
 </script>
 
 <style lang="scss">
@@ -36,7 +36,8 @@ export default {
   border-bottom: 1px solid rgb(218, 217, 217);
 
   .navbar-brand {
-    font-family: #fff;
+    font-family: 'Righteous';
+    color: #445b66;
   }
 }
 </style>

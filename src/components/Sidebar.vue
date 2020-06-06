@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-sidebar id="sidebar-right" title="Menu" right shadow backdrop-variant="transparent">
+    <b-sidebar id="sidebar-right" title="Menu" right shadow backdrop backdrop-variant="transparent">
       <b-list-group id="list-group">
         <b-list-group-item to="/" id="text-style">
           <b-icon id="icon" icon="house-fill"></b-icon> Home
@@ -37,7 +37,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'SideBar'
+};
 </script>
 
 <style scoped>

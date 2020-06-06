@@ -80,7 +80,7 @@ ul li a:hover {
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 10px;
   color: #888888;
 }
 </style>
