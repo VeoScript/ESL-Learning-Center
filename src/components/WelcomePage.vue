@@ -1,9 +1,9 @@
 <template>
     <div class="frontpage">
         <b-container>
-            <b-row class="hero-section text-center ma-3">
+            <b-row class="d-flex justify-content-center align-items-center hero-section text-center ma-3">
                 <b-col md="6">
-                    <b-img width="400" src="@/assets/photos/logo.png" ></b-img>
+                    <b-img class="side-image" width="200" src="@/assets/photos/communication.png" ></b-img>
                 </b-col>
                 <b-col lg="6" class="text-center">
                     <h2>Air Class Solution, Inc.</h2>
@@ -21,7 +21,7 @@
     background-image: url('../assets/photos/bg1.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    filter: brightness(95%);
+        // filter: brightness(95%);
     height: 85vh;
     display: flex;
     justify-content: center;
@@ -38,5 +38,11 @@
     p {
         font-size: 15px;
     }
+}
+
+@media only screen and (min-width: 1000px) {
+  .side-image {
+      width: 400px;
+  }
 }
 </style>
