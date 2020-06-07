@@ -5,7 +5,7 @@
         <b-col sm="12">
           <b-card no-body class="overflow-hidden">
             <b-row no-gutters>
-              <b-col sm="3">
+              <b-col md="3">
                 <b-card-body title="Lessons In PDF File" id="box1">
                   <hr />
                   <b-card-text>
@@ -19,7 +19,7 @@
                   <b-button>Lessons</b-button>
                 </b-card-body>
               </b-col>
-              <b-col sm="3">
+              <b-col md="3">
                 <b-card-body title="Opening Hours" id="box2">
                   <hr />
                   <b-card-text>
@@ -36,7 +36,7 @@
                   <hr />
                 </b-card-body>
               </b-col>
-              <b-col sm="6">
+              <b-col md="6">
                 <b-card-body title="Tell Us Your Concern" id="box3">
                   <hr />
                   <b-row>
