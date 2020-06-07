@@ -1,20 +1,28 @@
 <template>
   <div id="about">
     <section>
-      <vue-horizontal-list :items="items" :options="options">
+      <vue-horizontal-list :items="items">
         <template v-slot:default="{item}">
-          <div class="item">
-            <b-img :src="item.image" fluid alt="Responsive image"></b-img>
-            <h5>{{item.title}}</h5>
-            <p>{{item.content}}</p>
-          </div>
+           <b-card
+              :title="item.title"
+              :img-src="item.image"
+              img-alt="Image"
+              img-top
+              tag="article"
+              class="mb-2 item"
+              fluid
+            >
+              <b-card-text style="overflow-wrap: break-word;">
+                {{ item.content }}
+              </b-card-text>
+            </b-card>
         </template>
       </vue-horizontal-list>
     </section>
   </div>
 </template>
 
-<script>
+<script scoped>
   import Vue from 'vue'
   import VueHorizontalList from 'vue-horizontal-list';
 
@@ -25,65 +33,50 @@
     },
     data() {
       return {
-        options: {
-          responsive: [
-            {end: 576, size: 1}, 
-            {start: 576, end: 768, size: 2},
-            {start: 768, end: 992, size: 3},
-            {size: 4}
-          ],
-          list: {
-            // 1200 because @media (min-width: 1200px) and therefore I want to switch to windowed mode
-            windowed: 1200,
-            
-            // Because: #app {padding: 80px 24px;}
-            padding: 24
-          }
-        },  
         items: [
           {
-            title: 'Sed non ante non cras amet',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non sagittis leo. Vestibulum sit amet metus nec neque dignissim dapibus.',
-            image: 'https://picsum.photos/id/1015/600/600'
+            title: 'Jerome Villaruel',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non sagittis leo.',
+            image: 'https://avatars0.githubusercontent.com/u/26340308?s=460&u=bfa907f2fee8b19b3d7d9ebde07cfe0f33215b19&v=4'
           },
           {
-            title: 'Curabitur sit amet nunc',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id mollis erat. Aliquam erat volutpat. Nunc erat lacus, rhoncus nec.',
-            image: 'https://picsum.photos/id/1019/600/600'
+            title: 'Joshua Galit',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id mollis erat.',
+            image: 'https://avatars0.githubusercontent.com/u/38458781?s=460&u=d2e21173ef861da3d8ca3a292398cbc0c6f7c000&v=4'
           },
           {
-            title: 'Proin pharetra, ante metus',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac diam ac ex efficitur posuere. Pellentesque cursus pellentesque risus, non.',
+            title: 'Proin pharetra',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac diam ac ex',
             image: 'https://picsum.photos/id/1039/600/600'
           },
           {
-            title: 'Cras pharetra non enim a',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada varius nibh, a malesuada nisi feugiat eget. Aenean convallis semper.',
+            title: 'Cras pharetra',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada ',
             image: 'https://picsum.photos/id/1042/600/600'
           },
           {
-            title: 'Proin vulputate, augue eu accumsan',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla tempor libero sit amet mollis. Praesent quis leo erat. Integer.',
+            title: 'Proin vulputate',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla',
             image: 'https://picsum.photos/id/1044/600/600'
           },
           {
-            title: 'Maecenas feugiat magna sapien in',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet fringilla ante. Quisque at ipsum non lacus consequat dictum.',
+            title: 'Maecenas feugiat ',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet ',
             image: 'https://picsum.photos/id/1057/600/600'
           },
           {
-            title: 'Donec commodo sed enim at',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu condimentum risus. Praesent dignissim, neque nec pharetra vestibulum, libero odio.',
+            title: 'Donec commodo',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu condimentum',
             image: 'https://picsum.photos/id/1063/600/600'
           },
           {
-            title: 'In bibendum urna et turpis',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae ante volutpat leo vulputate volutpat et sed ex. Vivamus eu.',
+            title: 'In bibendum u',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae',
             image: 'https://picsum.photos/id/1076/600/600'
           },
           {
-            title: 'Phasellus iaculis dignissim erat at',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis quam scelerisque, eleifend purus gravida, scelerisque orci. Ut et turpis.',
+            title: 'Phasellus iac',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis quam ',
             image: 'https://picsum.photos/id/1083/600/600'
           },
         ]
@@ -94,11 +87,9 @@
 
 <style scoped>
   #about {
-    max-width: 1400px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-
-
     padding: 80px 24px;
   }
 
