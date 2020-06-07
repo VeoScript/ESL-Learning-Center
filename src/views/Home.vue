@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Hero />
+    <!-- <Hero /> -->
+    <front-page />
     <vision-mission />
     <card-details />
     <horizontal-list />
@@ -12,11 +13,12 @@
 export default {
   name: "Home",
   components: {
-    VisionMission: () => import('@/components/VisionMission.vue'),
-    FootBar: () => import("@/components/FootBar.vue"),
+    FrontPage: () => import('@/components/FrontPage'),
+    // Hero: () => import("@/components/Hero"),
+    VisionMission: () => import('@/components/VisionMission'),
+    FootBar: () => import("@/components/FootBar"),
     CardDetails: () => import("@/components/CardDetails"),
-    HorizontalList: () => import('@/components/HorizontalList.vue'),
-    Hero: () => import("@/components/Hero.vue")
+    HorizontalList: () => import('@/components/HorizontalList')
   }
 };
 </script>
