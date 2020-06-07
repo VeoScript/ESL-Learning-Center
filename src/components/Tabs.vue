@@ -36,7 +36,8 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
 blockquote {
   font-family: "Lobster Two";
   font-size: 20px;

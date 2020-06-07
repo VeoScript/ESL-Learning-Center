@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     // Carousel: () => import("@/components/Carousel.vue"),
     // Tabs: () => import("@/components/Tabs.vue"),

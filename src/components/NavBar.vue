@@ -96,7 +96,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #menuicon {
   background: none;
   border: 1px solid rgb(221, 221, 221);
