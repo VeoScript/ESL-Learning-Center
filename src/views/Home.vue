@@ -2,7 +2,7 @@
   <div>
     <welcome-page />
     <vision-mission />
-    <card-details />
+    <connect-with-us />
     <horizontal-list />
     <foot-bar />
   </div>
@@ -15,7 +15,7 @@ export default {
     WelcomePage: () => import('@/components/WelcomePage'),
     VisionMission: () => import('@/components/VisionMission'),
     FootBar: () => import("@/components/FootBar"),
-    CardDetails: () => import("@/components/CardDetails"),
+    ConnectWithUs: () => import("@/components/ConnectWithUs"),
     HorizontalList: () => import('@/components/HorizontalList')
   }
 };
