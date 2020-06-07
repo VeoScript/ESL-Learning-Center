@@ -48,13 +48,13 @@
                       <div class="social-bnr-agileits footer-icons-agileinfo">
                         <ul class="social-icons3">
                             <li>
-                              <a href="#" class="fa fa-facebook icon-border facebook"></a>
+                              <a href="#" target="_blank" class="fa fa-facebook icon-border facebook"></a>
                             </li>
                             <li>
-                              <a href="#" class="fa fa-twitter icon-border twitter"></a>
+                              <a href="#" target="_blank" class="fa fa-twitter icon-border twitter"></a>
                             </li>
                             <li>
-                              <a href="#" class="fa fa-google-plus icon-border googleplus"></a>
+                              <a href="#" target="_blank" class="fa fa-google-plus icon-border googleplus"></a>
                             </li>
                           </ul>
                       </div>
