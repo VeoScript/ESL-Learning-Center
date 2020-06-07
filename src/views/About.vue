@@ -1,17 +1,19 @@
 <template>
   <div class="about">
-    <h1>About</h1>
+     <welcome-page />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About'
+  name: 'About',
+
+  components: {
+    WelcomePage: () => import('@/components/WelcomePage')
+  }
 }
 </script>
 
 <style scoped>
-.about {
-  margin-top: 50px;
-}
+
 </style>

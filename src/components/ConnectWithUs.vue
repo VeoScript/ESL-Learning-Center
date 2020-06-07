@@ -1,0 +1,170 @@
+<template>
+  <div class="p-2 card-details">
+    <b-container>
+      <b-row class="justify-content-center">
+        <b-col sm="12">
+          <b-card>
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-body title="Contact Us" id="box3">
+                  <hr />
+                  <b-row>
+                    <b-col sm="12">
+                      <b-form-group>
+                        <b-form-input placeholder="Name"></b-form-input>
+                      </b-form-group>
+                    </b-col>
+                    <b-col sm="12">
+                      <b-form-group>
+                        <b-form-input placeholder="Email"></b-form-input>
+                      </b-form-group>
+                    </b-col>
+                    <b-col sm="12">
+                      <b-form-group>
+                        <b-form-textarea
+                          placeholder="Message"
+                          rows="6"
+                        ></b-form-textarea>
+                      </b-form-group>
+                    </b-col>
+                    <b-col sm="12">
+                      <b-form-group>
+                        <b-button block variant="info">
+                           <b-icon icon="chat-square-dots-fill"></b-icon> Send Message
+                        </b-button>
+                      </b-form-group>
+                    </b-col>
+                  </b-row>
+                </b-card-body>
+              </b-col>
+              <b-col md="6">
+                <b-card-body title="Connect With Us" id="box1">
+                  <hr />
+                  <div class="col-lg-12 col-md-12 col-sm-12 contact-w3-agile1" data-aos="flip-right">
+                      <p class="contact-agile1"><strong>Phone :</strong> 09153246565</p>
+                      <p class="contact-agile1"><strong>Email :</strong> <a href="https://victor@solutions.com">victor@solutions.com</a></p>
+                      <p class="contact-agile1"><strong>Address :</strong> Maasin City, Southern Leyte PH</p>
+
+                      <div class="social-bnr-agileits footer-icons-agileinfo">
+                        <ul class="social-icons3">
+                            <li>
+                              <a href="#" target="_blank" class="fa fa-facebook icon-border facebook"></a>
+                            </li>
+                            <li>
+                              <a href="#" target="_blank" class="fa fa-twitter icon-border twitter"></a>
+                            </li>
+                            <li>
+                              <a href="#" target="_blank" class="fa fa-google-plus icon-border googleplus"></a>
+                            </li>
+                          </ul>
+                      </div>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62832.8836922466!2d124.81454703162481!3d10.176166246458836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x78195cc21965652c!2sOur%20Lady%20Of%20Assumption%20Parish!5e0!3m2!1sen!2sin!4v1591512506451!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+
+.card {
+  border: none;
+}
+.card-details {
+  background: white;
+}
+
+#box1 {
+  // background: #17242a;
+  // color: #6cc4c5;
+  border: 1px solid #eee;
+  height: 430px;
+
+  .card-text {
+    padding: 10px;
+  }
+}
+
+#box2 {
+  // background: #2b7a77;
+  color: teal;
+  height: 430px;
+
+  .card-text {
+    color: teal;
+    font-size: 14px;
+  }
+}
+
+#box3 {
+  // background: #17242a;
+  // color: #6cc4c5;
+  height: 430px;
+  border: 1px solid #eee;
+
+  .card-text {
+    color: teal;
+  }
+}
+
+
+/*--social-icons--*/
+ul.social-icons3 {
+    display: block;
+    padding: 0;
+    margin-top: .55em;
+}
+.social-icons3 li{
+	display:inline-block;
+}
+.social-icons3 li a{  
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-right: 1em;
+    -webkit-transition: .5s all;
+    transition: .5s all;
+    -moz-transition: .5s all;
+	margin-right: 1em;
+	-webkit-transition: .5s all;
+    transition: .5s all;
+    -moz-transition: .5s all;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+    -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+    -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+    line-height: 30px;
+	color:#fff;
+	text-align:center;
+}
+.social-icons3 li a.fa.fa-facebook.icon-border.facebook{
+	 background:#4D669C;
+}
+.social-icons3 li a.fa.fa-twitter.icon-border.twitter{
+	 background:#1da1f2;
+}
+.social-icons3 li a.fa.fa-google-plus.icon-border.googleplus{
+	 background:#d34836;
+}
+.social-icons3 li a.fa.fa-rss.icon-border.rss{
+	 background:#ee802f;
+}
+.social-icons3 li a:hover{
+	text-decoration:none;
+	opacity:0.8;
+}
+
+.contact-w3-agile1 iframe {
+    width: 100%;
+    height: 130px;
+    margin-top: 1.5em;
+    outline: none;
+    border: none;
+}
+</style>

@@ -1,23 +1,25 @@
 <template>
   <div id="about">
     <section>
-      <vue-horizontal-list :items="items">
-        <template v-slot:default="{item}">
-           <b-card
-              :title="item.title"
-              :img-src="item.image"
-              img-alt="Image"
-              img-top
-              tag="article"
-              class="mb-2 item"
-              fluid
-            >
-              <b-card-text style="overflow-wrap: break-word;">
-                {{ item.content }}
-              </b-card-text>
-            </b-card>
-        </template>
-      </vue-horizontal-list>
+      <b-container>
+        <vue-horizontal-list :items="items">
+          <template v-slot:default="{item}">
+            <b-card
+                :title="item.title"
+                :img-src="item.image"
+                img-alt="Image"
+                img-top
+                tag="article"
+                class="mb-2 item"
+                fluid
+              >
+                <b-card-text style="overflow-wrap: break-word;">
+                  {{ item.content }}
+                </b-card-text>
+              </b-card>
+          </template>
+        </vue-horizontal-list>
+      </b-container>
     </section>
   </div>
 </template>
