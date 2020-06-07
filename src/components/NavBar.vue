@@ -5,8 +5,12 @@
         <b-navbar-brand route to="/" class="mb-0">
           <img src="@/assets/photos/logo.png" height="30" alt="Vic Solutions">
         </b-navbar-brand>
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-        <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-toggle target="collapse"  @click="toggle = !toggle">
+          <b-icon 
+              :icon="toggle ? 'x' : 'list'">
+          </b-icon>
+        </b-navbar-toggle>
+        <b-collapse v-model="toggle" is-nav>
           <b-navbar-nav class="ml-auto">
             <b-navbar-nav class="d-flex justify-content-center align-items-center">
               <b-nav-item 
@@ -90,9 +94,10 @@
 <script>
 export default {
   name: "Navbar",
-  components: {
-    
-  }
+  
+  data: () => ({
+    toggle: false
+  })
 }
 </script>
 
@@ -115,4 +120,14 @@ export default {
     color: #445b66;
   }
 }
+
+// .navbar-toggler {
+//   border: none;
+//   background: none;
+// }
+// .navbar-toggler:focus {
+//   border: none;
+//   background: none;
+// }
+
 </style>
