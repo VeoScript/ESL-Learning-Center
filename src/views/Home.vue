@@ -1,7 +1,6 @@
 <template>
   <div>
-    <!-- <Hero /> -->
-    <front-page />
+    <welcome-page />
     <vision-mission />
     <card-details />
     <horizontal-list />
@@ -13,8 +12,7 @@
 export default {
   name: "Home",
   components: {
-    FrontPage: () => import('@/components/FrontPage'),
-    // Hero: () => import("@/components/Hero"),
+    WelcomePage: () => import('@/components/WelcomePage'),
     VisionMission: () => import('@/components/VisionMission'),
     FootBar: () => import("@/components/FootBar"),
     CardDetails: () => import("@/components/CardDetails"),
