@@ -93,6 +93,11 @@
     padding: 80px 24px;
   }
 
+  .card {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
   @media (min-width: 1200px) {
     #about {
       padding-left: 80px;
