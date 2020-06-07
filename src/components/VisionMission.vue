@@ -32,7 +32,6 @@
 
 <style lang="scss" scoped>
   .carddetails{
-    margin-top: 50px;
     background: white;
   }
   p {
