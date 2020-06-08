@@ -2,13 +2,13 @@
     <div>
       <footer class="bd-footer text-muted docs-border">
         <b-row class="justify-content-center container">
-          <b-col sm="3">
+          <b-col md="3">
             <b-img fluid src="@/assets/photos/logo.png" width="100"></b-img>
             <p class="cname">Victor Air Class Solutions, Inc.</p>
           </b-col>
-          <b-col sm="9">
+          <b-col md="9">
             <b-row>
-              <b-col sm="3">
+              <b-col md="3">
                 <h5 class="ftxt">About School</h5>
                 <ul>
                   <li><router-link to="/">About Us</router-link></li>
@@ -87,7 +87,7 @@ ul li a:hover {
   text-align: center;
   font-size: 14px;
   padding: 10px 0;
+  color: #393536;
   background: #fff;
 }
-
 </style>

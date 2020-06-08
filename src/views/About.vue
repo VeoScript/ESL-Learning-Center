@@ -1,11 +1,19 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+     <welcome-page />
   </div>
 </template>
 
-<style lang="scss">
-.about {
-  margin-top: 50px;
+<script>
+export default {
+  name: 'About',
+
+  components: {
+    WelcomePage: () => import('@/components/WelcomePage')
+  }
 }
+</script>
+
+<style scoped>
+
 </style>

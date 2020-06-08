@@ -1,24 +1,22 @@
 <template>
   <div>
-    <carousel />
-    <b-container>
-      <card-details />
-      <card-details-owner /> 
-      <!-- <tabs />-->
-    </b-container>
+    <welcome-page />
+    <vision-mission />
+    <connect-with-us />
+    <horizontal-list />
     <foot-bar />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    Carousel: () => import("@/components/Carousel.vue"),
-    // Tabs: () => import("@/components/Tabs.vue"),
-    CardDetails: () => import("@/components/CardDetails.vue"),
-    FootBar: () => import("@/components/FootBar.vue"),
-    CardDetailsOwner: () => import("@/components/CardDetailsOwner.vue")
+    WelcomePage: () => import('@/components/WelcomePage'),
+    VisionMission: () => import('@/components/VisionMission'),
+    FootBar: () => import("@/components/FootBar"),
+    ConnectWithUs: () => import("@/components/ConnectWithUs"),
+    HorizontalList: () => import('@/components/HorizontalList')
   }
 };
 </script>
