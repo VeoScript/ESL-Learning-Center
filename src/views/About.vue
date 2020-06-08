@@ -33,7 +33,8 @@
      </div>
      <div id="careers">
        <b-container>
-        <h1>Careers</h1>
+        <h2 class="text-center">Careers</h2>
+        <carrer-section />
       </b-container>
      </div>
      <foot-bar />
@@ -49,6 +50,7 @@ export default {
     WelcomePage: () => import('@/components/WelcomePage'),
     OurStaffSection: () => import('@/components/OurStaffSection'),
     CarouselOverflow: () => import('@/components/CarouselOverflow'),
+    CarrerSection: () => import('@/components/CarrerSection'),
     FootBar: () => import("@/components/FootBar"),
   },
 
