@@ -33,7 +33,7 @@
      </div>
      <div id="careers">
        <b-container>
-        <h2 class="text-center">Careers</h2>
+        <h2 class="text-center">Careers Path</h2>
         <carrer-section />
       </b-container>
      </div>
