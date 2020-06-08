@@ -22,7 +22,7 @@
      <div id="our-staff"> 
        <b-container>
         <h2 class="text-center">Our Staff</h2>
-        
+        <our-staff-section />
       </b-container>
      </div>
      <div id="our-partners">
@@ -47,6 +47,7 @@ export default {
 
   components: {
     WelcomePage: () => import('@/components/WelcomePage'),
+    OurStaffSection: () => import('@/components/OurStaffSection'),
     CarouselOverflow: () => import('@/components/CarouselOverflow'),
     FootBar: () => import("@/components/FootBar"),
   },
