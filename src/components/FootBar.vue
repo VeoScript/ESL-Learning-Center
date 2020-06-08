@@ -11,10 +11,10 @@
               <b-col md="3">
                 <h5 class="ftxt">About School</h5>
                 <ul>
-                  <li><router-link to="/">About Us</router-link></li>
-                  <li><router-link to="/">Our Staff</router-link></li>
-                  <li><router-link to="/">Our Partners</router-link></li>
-                  <li><router-link to="/">Careers</router-link></li>
+                  <li><router-link to="/about">About Us</router-link></li>
+                  <li><router-link to="/about">Our Staff</router-link></li>
+                  <li><router-link to="/about">Our Partners</router-link></li>
+                  <li><router-link to="/about">Careers</router-link></li>
                 </ul>
               </b-col>
               <b-col sm="4">
@@ -41,12 +41,19 @@
         </b-row>
       </footer>
       <div class="copy-right">
-       &copy;{{ new Date().getFullYear() }} <b>Victor Air Class Solutions, Inc.</b>, Designed and Developed by VEOSCRIPT & ACATZK.
+       &copy;{{ new Date().getFullYear() }} 
+       <b>Victor Air Class Solutions, Inc.</b>, 
+       Designed and developed by <b>
+         <a href="https://github.com/veoscript" target="_blank">veoscript</a></b> & 
+         <b><a href="https://github.com/acatzk" target="_blank">acatzk</a></b>.
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+a {
+  color: #21333b;
+}
 footer {
   background: #17242a;
   padding: 60px 0;

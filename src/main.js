@@ -8,6 +8,8 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import VueFbCustomerChat from 'vue-fb-customer-chat'
+import VueGoodWizard from 'vue-good-wizard';
+
  
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
@@ -18,6 +20,8 @@ Vue.use(VueFbCustomerChat, {
   theme_color: '#333333', 
   locale: 'en_US', 
 })
+Vue.use(VueGoodWizard);
+
 
 new Vue({
   router,
