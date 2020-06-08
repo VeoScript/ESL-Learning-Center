@@ -13,6 +13,7 @@
     "vue": "^2.6.11",
     "vue-carousel-3d": "^0.2.0",
     "vue-fb-customer-chat": "^0.2.0",
+    "vue-good-wizard": "^1.4.1",
     "vue-horizontal-list": "^1.0.7",
     "vue-page-transition": "^0.2.2",
     "vue-router": "^3.2.0",
