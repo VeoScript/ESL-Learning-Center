@@ -9,7 +9,6 @@
       <b-navbar-nav>
         <b-navbar-nav>
           <b-nav-item href="#">Home <span class="sr-only">(current)</span></b-nav-item>
-          <b-nav-item href="#">About <span class="sr-only"></span></b-nav-item>
           <b-nav-item href="#">Lessons <span class="sr-only"></span></b-nav-item>
           <b-nav-item href="#">Teachers <span class="sr-only"></span></b-nav-item>
         </b-navbar-nav>
