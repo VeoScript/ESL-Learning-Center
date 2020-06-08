@@ -17,7 +17,7 @@
 
 <style lang="scss" scoped>
 .frontpage {
-    background-image: url('../assets/photos/bg1.jpg');
+    background-image: url('../assets/photos/bg.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
         // filter: brightness(95%);
