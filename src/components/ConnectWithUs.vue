@@ -1,10 +1,10 @@
 <template>
-  <div class="p-2 card-details">
+  <div class="card-details">
     <b-container>
       <b-row class="justify-content-center">
         <b-col sm="12">
           <b-card>
-            <b-row no-gutters>
+            <b-row>
               <b-col md="6">
                 <b-card-body title="Contact Us" id="box3">
                   <hr />
@@ -163,7 +163,6 @@ ul.social-icons3 {
 .contact-w3-agile1 iframe {
     width: 100%;
     height: 130px;
-    margin-top: 1.5em;
     outline: none;
     border: none;
 }
