@@ -11,10 +11,10 @@
               <b-col md="3">
                 <h5 class="ftxt">About School</h5>
                 <ul>
-                  <li><router-link to="/">About Us</router-link></li>
-                  <li><router-link to="/">Our Staff</router-link></li>
-                  <li><router-link to="/">Our Partners</router-link></li>
-                  <li><router-link to="/">Careers</router-link></li>
+                  <li><router-link to="/about">About Us</router-link></li>
+                  <li><router-link to="/about">Our Staff</router-link></li>
+                  <li><router-link to="/about">Our Partners</router-link></li>
+                  <li><router-link to="/about">Careers</router-link></li>
                 </ul>
               </b-col>
               <b-col sm="4">
