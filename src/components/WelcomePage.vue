@@ -3,17 +3,47 @@
         <b-container>
             <b-row class="d-flex justify-content-center align-items-center hero-section text-center ma-3">
                 <b-col md="6">
-                    <b-img class="side-image" width="180" src="@/assets/photos/communication.png" ></b-img>
+                    <b-img class="side-image" width="180" :src="sideImage"></b-img>
+                    <!-- @/assets/photos/communication.png -->
                 </b-col>
                 <b-col lg="6" class="text-center">
-                    <h2>Air Class Solution, Inc.</h2>
-                    <p>Learning English Language Through Video Calls. Putting Children First. Preparing children for success in life.</p>
-                    <b-button pill variant="danger" size="lg">Learn More</b-button>
+                    <h2>{{ title }}</h2>
+                    <!-- Air Class Solution, Inc. -->
+                    <p>{{ }}</p>
+                    <!-- Learning English Language Through Video Calls. Putting Children First. Preparing children for success in life. -->
+                    <b-button pill variant="danger" size="lg">{{ buttonText }}</b-button>
+                    <!-- Learn More -->
                 </b-col>
             </b-row>
         </b-container>
     </div>
 </template>
+
+
+<script>
+export default {
+    name: 'WelcomePage',
+
+    props: {
+        sideImage: {
+            required: true,
+            type: String
+        },
+        title: {
+            type: String,
+            required: true
+        },
+        description: {
+            type: String,
+            required: true
+        },
+        buttonText: {
+            type: String,
+            default: 'Learn More'
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 .frontpage {
