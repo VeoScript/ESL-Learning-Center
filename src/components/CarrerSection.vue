@@ -5,20 +5,60 @@
       :onNext="nextClicked" 
       :onBack="backClicked">
       <div slot="page1">
-        <h4 class="text-center">Step 1</h4>
-        <p>This is step 1</p>
+        <h4>Step 1</h4>
+        <b-row>
+            <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+            <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+                <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+        </b-row>
       </div>
       <div slot="page2">
         <h4 class="text-center">Step 2</h4>
-        <p>This is step 2</p>
+         <b-row>
+            <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+            <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+                <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+        </b-row>
       </div>
       <div slot="page3">
         <h4 class="text-center">Step 3</h4>
-        <p>This is step 3</p>
+        <b-row>
+            <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+            <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+                <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+        </b-row>
       </div>
       <div slot="page4">
         <h4 class="text-center">Step 4</h4>
-        <p>This is step 4</p>
+        <b-row>
+            <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+            <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+                <b-col>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
+            </b-col>
+        </b-row>
       </div>
     </vue-good-wizard>
   </div>
@@ -51,13 +91,17 @@ export default {
   },
   methods: {
     nextClicked(currentPage) {
-      console.log('next clicked', currentPage)
-      return true; //return false if you want to prevent moving to next page
+      return true; 
     },
     backClicked(currentPage) {
-      console.log('back clicked', currentPage);
-      return true; //return false if you want to prevent moving to previous page
+      return true;
     }
   },
 };
 </script>
+
+<style scoped>
+.icon {
+    width: 500px;   
+}
+</style>
