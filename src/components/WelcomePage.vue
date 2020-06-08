@@ -4,15 +4,11 @@
             <b-row class="d-flex justify-content-center align-items-center hero-section text-center ma-3">
                 <b-col md="6">
                     <b-img class="side-image" width="180" :src="sideImage"></b-img>
-                    <!-- @/assets/photos/communication.png -->
                 </b-col>
                 <b-col lg="6" class="text-center">
                     <h2>{{ title }}</h2>
-                    <!-- Air Class Solution, Inc. -->
-                    <p>{{ }}</p>
-                    <!-- Learning English Language Through Video Calls. Putting Children First. Preparing children for success in life. -->
+                    <p>{{ description }}</p>
                     <b-button pill variant="danger" size="lg">{{ buttonText }}</b-button>
-                    <!-- Learn More -->
                 </b-col>
             </b-row>
         </b-container>
