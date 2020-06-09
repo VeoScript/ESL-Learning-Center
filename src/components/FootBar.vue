@@ -11,10 +11,22 @@
               <b-col md="3">
                 <h5 class="ftxt">About School</h5>
                 <ul>
-                  <li><router-link to="/about">About Us</router-link></li>
-                  <li><router-link to="/about">Our Staff</router-link></li>
-                  <li><router-link to="/about">Our Partners</router-link></li>
-                  <li><router-link to="/about">Careers</router-link></li>
+                  <li>
+                    <router-link to="/about" v-if="$route.path !== '/about'">Company Profile</router-link>
+                    <scroll-link href="#about-us" v-else>Company Profile</scroll-link>
+                  </li>
+                  <li>
+                    <router-link to="/about" v-if="$route.path !== '/about'">Our Staff</router-link>
+                    <scroll-link href="#our-staff" v-else>Our Staff</scroll-link>
+                  </li>
+                  <li>
+                    <router-link to="/about" v-if="$route.path !== '/about'">Our Partners</router-link>
+                    <scroll-link href="#our-partners" v-else>Our Partners</scroll-link>
+                  </li>
+                  <li>
+                    <router-link to="/about" v-if="$route.path !== '/about'">Careers</router-link>
+                    <scroll-link href="#careers" v-else>Careers</scroll-link>
+                  </li>
                 </ul>
               </b-col>
               <b-col sm="4">
@@ -49,6 +61,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'FootBar',
+
+  components: {
+    ScrollLink: () => import('./ScrollLink')
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 a {
