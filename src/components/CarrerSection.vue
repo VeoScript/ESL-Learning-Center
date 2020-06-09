@@ -79,7 +79,7 @@ export default {
           slot: 'page2',
         },
         {
-          label: 'Select Vacant Teacher',
+          label: 'Video Call Teaching Converstation',
           slot: 'page3',
         },
         {
