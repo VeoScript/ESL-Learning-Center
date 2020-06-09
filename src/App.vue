@@ -45,4 +45,8 @@ li {
 body {
   background: rgba(227, 245, 245, 0.467);
 }
+
+.content {
+  margin-top: 58px;
+}
 </style>
