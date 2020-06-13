@@ -21,9 +21,14 @@
                     </b-col>
                     <b-col sm="12">
                       <b-form-group>
+                        <b-form-input placeholder="Cell Number"></b-form-input>
+                      </b-form-group>
+                    </b-col>
+                    <b-col sm="12">
+                      <b-form-group>
                         <b-form-textarea
                           placeholder="Message"
-                          rows="6"
+                          rows="4"
                         ></b-form-textarea>
                       </b-form-group>
                     </b-col>
