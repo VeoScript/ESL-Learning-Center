@@ -67,7 +67,7 @@ export default {
   name: 'FootBar',
 
   components: {
-    ScrollLink: () => import('@/components/ScrollLink')
+    ScrollLink: () => import('@/components/mixins/ScrollLink')
   }
 }
 </script>
