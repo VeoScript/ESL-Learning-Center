@@ -28,7 +28,7 @@
      <div id="our-staff"> 
        <b-container>
         <h2 class="text-center">Our Staff</h2>
-        <our-staff-section />
+        <about-our-staff-page />
       </b-container>
      </div> <!-- Our Staf Side Information and Owners -->
 
@@ -51,7 +51,7 @@
      <div id="careers">
        <b-container>
         <h2 class="text-center">Careers Path</h2>
-        <carrer-section />
+        <about-carrer-page />
       </b-container>
      </div> <!-- Career Path Information -->
 
@@ -66,8 +66,8 @@ export default {
 
   components: {
     AboutFrontPage: () => import('@/components/mixins/FrontPage'),
-    OurStaffSection: () => import('@/components/pages/about/OurStaffSection'),
-    CarrerSection: () => import('@/components/pages/about/CarrerSection')
+    AboutOurStaffPage: () => import('@/components/pages/about/AboutOurStaffPage'),
+    AboutCarrerPage: () => import('@/components/pages/about/AboutCarrerPage')
   },
 
   data: () => ({
