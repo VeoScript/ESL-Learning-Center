@@ -92,13 +92,13 @@
 </template>
 
 <script>
-export default {
-  name: "Navbar",
-  
-  data: () => ({
-    toggle: false
-  })
-}
+  export default {
+    name: "Navbar",
+    
+    data: () => ({
+      toggle: false
+    })
+  }
 </script>
 
 <style lang="scss" scoped>

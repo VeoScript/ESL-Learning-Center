@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <nav-bar />
+    <the-nav-bar />
     <vue-page-transition name="fade-in-right" class="content">
       <router-view />
     </vue-page-transition>
+    <the-foot-bar />
   </div>
 </template>
 
 <script>
-export default {
-  components: {
-    NavBar: () => import("@/components/NavBar.vue")
+  export default {
+    components: {
+      TheNavBar: () => import("@/components/layouts/TheNavBar.vue"),
+      TheFootBar: () => import("@/components/layouts/TheFootBar")
+    }
   }
-};
 </script>
 
 <style lang="scss">

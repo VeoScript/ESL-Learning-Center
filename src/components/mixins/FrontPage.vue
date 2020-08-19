@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    name: 'WelcomePage',
+    name: 'front-page',
 
     props: {
         sideImage: {
@@ -43,7 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .frontpage {
-    background-image: url('../assets/photos/bg.png');
+    background-image: url('./../../assets/photos/bg.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
         // filter: brightness(95%);

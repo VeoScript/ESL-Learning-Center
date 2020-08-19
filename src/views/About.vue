@@ -1,11 +1,13 @@
 <template>
   <div class="about">
-     <welcome-page 
-       :sideImage="sideImage"
-       :title="title"
-       :description="description"
-       :buttonText="buttonText"
-     />
+     <about-front-page 
+       :sideImage="frontpage.sideImage"
+       :title="frontpage.title"
+       :description="frontpage.description"
+       :buttonText="frontpage.buttonText"
+     ></about-front-page> <!-- Front Page first to show -->
+
+
      <div id="about-us">
         <b-container>
           <b-row class="d-flex justify-content-center align-items-center text-center">
@@ -20,26 +22,40 @@
               </b-col>
           </b-row>
         </b-container>
-     </div>
+     </div> <!-- Company Profile and Side Information -->
+
+
      <div id="our-staff"> 
        <b-container>
         <h2 class="text-center">Our Staff</h2>
-        <our-staff-section />
+        <about-our-staff-page />
       </b-container>
-     </div>
+     </div> <!-- Our Staf Side Information and Owners -->
+
+
      <div id="our-partners">
         <b-container>
           <h2 class="text-center">Our Partners</h2>
-          <carousel-overflow /> <!--  Carousel Overflow component-->
+          <carousel-3d :autoplay="true" :autoplay-timeout="2400">
+              <div v-for="(item, index) in partners" :key="item.id">
+                  <slide :index="index">
+                      <img :src="item.src" />
+                  </slide>
+              </div>
+          </carousel-3d>
         </b-container>
-     </div>
+     </div> <!-- Carousel3d partners Information -->
+
+
+
      <div id="careers">
        <b-container>
         <h2 class="text-center">Careers Path</h2>
-        <carrer-section />
+        <about-carrer-page />
       </b-container>
-     </div>
-     <foot-bar />
+     </div> <!-- Career Path Information -->
+
+
   </div>
 </template>
 
@@ -49,18 +65,52 @@ export default {
   name: 'About',
 
   components: {
-    WelcomePage: () => import('@/components/WelcomePage'),
-    OurStaffSection: () => import('@/components/OurStaffSection'),
-    CarouselOverflow: () => import('@/components/CarouselOverflow'),
-    CarrerSection: () => import('@/components/CarrerSection'),
-    FootBar: () => import("@/components/FootBar"),
+    AboutFrontPage: () => import('@/components/mixins/FrontPage'),
+    AboutOurStaffPage: () => import('@/components/pages/about/AboutOurStaffPage'),
+    AboutCarrerPage: () => import('@/components/pages/about/AboutCarrerPage')
   },
 
   data: () => ({
-    sideImage: require('@/assets/photos/communication.png'),
-    title: 'About Our Company',
-    description: 'Foundation of English school language,  an education.  Quality education is with English school tradition',
-    buttonText: 'Enroll Now'
+    frontpage: {
+      sideImage: require('@/assets/photos/communication.png'),
+      title: 'About Our Company',
+      description: 'Foundation of English school language,  an education.  Quality education is with English school tradition',
+      buttonText: 'Enroll Now',
+    },
+    partners: [
+        {
+            id: 0,
+            src: 'https://res.cloudinary.com/ameo/image/upload/v1498843587/kTcPaQR_x77hor.jpg'
+        },
+        {
+            id: 1,
+            src: 'https://unsplash.it/400/300?image=456'
+        },
+        {
+            id: 2,
+            src: 'https://unsplash.it/400/300?image=222'
+        },
+        {
+            id: 3,
+            src: 'https://unsplash.it/400/300?image=1003'
+        },
+        {
+            id: 4,
+            src: 'https://unsplash.it/400/300?image=940'
+        },
+        {
+            id: 5,
+            src: 'https://unsplash.it/400/300?image=944'
+        },
+        {
+            id: 6,
+            src: 'https://source.unsplash.com/mEr7U5yfYt8/400x300'
+        },
+        {
+            id: 7,
+            src: 'https://unsplash.it/400/300?image=1041'
+        }
+    ]
   })
 }
 </script>
