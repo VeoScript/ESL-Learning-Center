@@ -45,6 +45,14 @@
 
     name: "Home",
 
+
+    components: {
+      HomeFrontPage: () => import('@/components/mixins/FrontPage'),
+      HomeVisionMissionPage: () => import('@/components/pages/home/HomeVisionMissionPage'),
+      HomeConnectPage: () => import('@/components/pages/home/HomeContactPage'),
+      HomeHorizontalList: () => import('vue-horizontal-list')
+    },
+
     data () {
       return {
          frontpage: {
@@ -91,13 +99,6 @@
           },
         ]
       }
-    },
-
-    components: {
-      HomeFrontPage: () => import('@/components/mixins/FrontPage'),
-      HomeVisionMissionPage: () => import('@/components/pages/home/HomeVisionMission'),
-      HomeConnectPage: () => import('@/components/pages/home/HomeContactPage'),
-      HomeHorizontalList: () => import('vue-horizontal-list')
     }
 
   }
