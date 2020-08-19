@@ -40,7 +40,7 @@
   font-size: 146px;
   font-weight: 700;
   margin: 0px;
-  color: #fff;
+  color: rgb(44, 43, 43);
 }
 .notfound .notfound-404 h1>span {
   display: inline-block;
@@ -59,11 +59,11 @@
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
-  color: #fff;
+  color: rgb(78, 78, 78);
 }
 .notfound p {
   font-family: 'Montserrat', sans-serif;
-  color: #c7c7c7;
+  color: #414141;
   font-weight: 300;
 }
 .notfound .link-custom {
