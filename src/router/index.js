@@ -5,19 +5,24 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    path: '*',
+    name: '404-not-found',
+    component: () => import('@/components/errors/404')
+  },
+  {
     path: '/',
     name: 'home',
-    component: () => import('@/views/Home.vue')
+    component: () => import('@/views/Home')
   },
   {
     path: '/about',
     name: 'about',
-    component: () => import("@/views/About.vue")
+    component: () => import("@/views/About")
   },
   {
     path: '/lessons',
     name: 'lessons',
-    component: () => import('@/views/Lessons.vue')
+    component: () => import('@/views/Lessons')
   }
 ];
 
