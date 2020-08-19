@@ -11,7 +11,6 @@
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-backtotop": "^1.6.1",
     "vue-carousel-3d": "^0.2.0",
     "vue-fb-customer-chat": "^0.2.0",
     "vue-good-wizard": "^1.4.1",
