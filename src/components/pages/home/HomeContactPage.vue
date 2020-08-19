@@ -21,7 +21,7 @@
                     </b-col>
                     <b-col sm="12">
                       <b-form-group>
-                        <b-form-input placeholder="Cell Number"></b-form-input>
+                        <b-form-input placeholder="Phone Number"></b-form-input>
                       </b-form-group>
                     </b-col>
                     <b-col sm="12">
@@ -32,14 +32,15 @@
                         ></b-form-textarea>
                       </b-form-group>
                     </b-col>
-                    <b-col sm="12">
-                      <b-form-group>
-                        <b-button block variant="info">
-                           <b-icon icon="chat-square-dots-fill"></b-icon> Send Message
-                        </b-button>
-                      </b-form-group>
-                    </b-col>
                   </b-row>
+                    <b-button-group style="width: 100%;">
+                        <b-button variant="outline-secondary">
+                          <b-icon icon="x"></b-icon> Cancel
+                        </b-button>
+                        <b-button variant="primary">
+                          <b-icon icon="chat-square-dots-fill"></b-icon> Send
+                        </b-button>
+                      </b-button-group>
                 </b-card-body>
               </b-col>
               <b-col md="6">
@@ -88,7 +89,7 @@
   // background: #17242a;
   // color: #6cc4c5;
   border: 1px solid #eee;
-  height: 430px;
+  min-height: 430px;
 
   .card-text {
     padding: 10px;
@@ -98,7 +99,7 @@
 #box2 {
   // background: #2b7a77;
   color: teal;
-  height: 430px;
+  min-height: 430px;
 
   .card-text {
     color: teal;
@@ -109,7 +110,7 @@
 #box3 {
   // background: #17242a;
   // color: #6cc4c5;
-  height: 430px;
+  min-height: 430px;
   border: 1px solid #eee;
 
   .card-text {
