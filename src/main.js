@@ -11,6 +11,7 @@ import VueFbCustomerChat from 'vue-fb-customer-chat'
 import VueGoodWizard from 'vue-good-wizard'
 import Carousel3d from 'vue-carousel-3d'
 import Vuelidate from 'vuelidate'
+import { apolloProvider } from '@/services'
 
  
 Vue.config.productionTip = false;
@@ -29,5 +30,6 @@ Vue.use(Vuelidate)
 new Vue({
   router,
   store,
+  apolloProvider,
   render: h => h(App)
 }).$mount("#app")
