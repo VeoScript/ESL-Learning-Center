@@ -6,7 +6,7 @@
        :description="description"
        :buttonText="buttonText"
     />
-    <vision-mission />
+    <home-vision-mission />
     <connect-with-us />
     <horizontal-list />
   </div>
@@ -17,7 +17,7 @@
     name: "Home",
     components: {
       FrontPage: () => import('@/components/mixins/FrontPage'),
-      VisionMission: () => import('@/components/VisionMission'),
+      HomeVisionMission: () => import('@/components/pages/home/HomeVisionMission'),
       ConnectWithUs: () => import("@/components/ConnectWithUs"),
       HorizontalList: () => import('@/components/HorizontalList')
     },
