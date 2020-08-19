@@ -1,11 +1,13 @@
 <template>
   <div class="about">
-     <front-page 
+     <about-front-page 
        :sideImage="frontpage.sideImage"
        :title="frontpage.title"
        :description="frontpage.description"
        :buttonText="frontpage.buttonText"
-     />
+     ></about-front-page> <!-- Front Page first to show -->
+
+
      <div id="about-us">
         <b-container>
           <b-row class="d-flex justify-content-center align-items-center text-center">
@@ -20,13 +22,17 @@
               </b-col>
           </b-row>
         </b-container>
-     </div>
+     </div> <!-- Company Profile and Side Information -->
+
+
      <div id="our-staff"> 
        <b-container>
         <h2 class="text-center">Our Staff</h2>
         <our-staff-section />
       </b-container>
-     </div>
+     </div> <!-- Our Staf Side Information and Owners -->
+
+
      <div id="our-partners">
         <b-container>
           <h2 class="text-center">Our Partners</h2>
@@ -38,13 +44,18 @@
               </div>
           </carousel-3d>
         </b-container>
-     </div>
+     </div> <!-- Carousel3d partners Information -->
+
+
+
      <div id="careers">
        <b-container>
         <h2 class="text-center">Careers Path</h2>
         <carrer-section />
       </b-container>
-     </div>
+     </div> <!-- Career Path Information -->
+
+
   </div>
 </template>
 
@@ -54,9 +65,9 @@ export default {
   name: 'About',
 
   components: {
-    FrontPage: () => import('@/components/mixins/FrontPage'),
-    OurStaffSection: () => import('@/components/OurStaffSection'),
-    CarrerSection: () => import('@/components/CarrerSection')
+    AboutFrontPage: () => import('@/components/mixins/FrontPage'),
+    OurStaffSection: () => import('@/components/pages/about/OurStaffSection'),
+    CarrerSection: () => import('@/components/pages/about/CarrerSection')
   },
 
   data: () => ({
