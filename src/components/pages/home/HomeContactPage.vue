@@ -143,6 +143,8 @@
 
 <script>
 
+  import { toastAlertStatus } from '@/utils'
+
   import { ADD_INBOX_MUTATION } from '@/graphql/mutations'
 
   import { required, minLength, maxLength, email } from 'vuelidate/lib/validators'
@@ -204,12 +206,11 @@
              variables : { name, email, contact, message }
            })
            .then(() => {
-              this.loading = false
               this.onResetForm()
-              alert('Good Job!')
+              toastAlertStatus('You message Successfully Send', 'success')
            })
            .catch(error => {
-
+             toastAlertStatus(error, 'success')
              this.onSubmitForm()
            })
         }
