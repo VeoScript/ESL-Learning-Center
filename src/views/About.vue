@@ -1,10 +1,10 @@
 <template>
   <div class="about">
      <front-page 
-       :sideImage="sideImage"
-       :title="title"
-       :description="description"
-       :buttonText="buttonText"
+       :sideImage="frontpage.sideImage"
+       :title="frontpage.title"
+       :description="frontpage.description"
+       :buttonText="frontpage.buttonText"
      />
      <div id="about-us">
         <b-container>
@@ -30,7 +30,13 @@
      <div id="our-partners">
         <b-container>
           <h2 class="text-center">Our Partners</h2>
-          <carousel-overflow /> <!--  Carousel Overflow component-->
+          <carousel-3d :autoplay="true" :autoplay-timeout="2400">
+              <div v-for="(item, index) in partners" :key="item.id">
+                  <slide :index="index">
+                      <img :src="item.src" />
+                  </slide>
+              </div>
+          </carousel-3d>
         </b-container>
      </div>
      <div id="careers">
@@ -50,15 +56,50 @@ export default {
   components: {
     FrontPage: () => import('@/components/mixins/FrontPage'),
     OurStaffSection: () => import('@/components/OurStaffSection'),
-    CarouselOverflow: () => import('@/components/CarouselOverflow'),
     CarrerSection: () => import('@/components/CarrerSection')
   },
 
   data: () => ({
-    sideImage: require('@/assets/photos/communication.png'),
-    title: 'About Our Company',
-    description: 'Foundation of English school language,  an education.  Quality education is with English school tradition',
-    buttonText: 'Enroll Now'
+    frontpage: {
+      sideImage: require('@/assets/photos/communication.png'),
+      title: 'About Our Company',
+      description: 'Foundation of English school language,  an education.  Quality education is with English school tradition',
+      buttonText: 'Enroll Now',
+    },
+    partners: [
+        {
+            id: 0,
+            src: 'https://res.cloudinary.com/ameo/image/upload/v1498843587/kTcPaQR_x77hor.jpg'
+        },
+        {
+            id: 1,
+            src: 'https://unsplash.it/400/300?image=456'
+        },
+        {
+            id: 2,
+            src: 'https://unsplash.it/400/300?image=222'
+        },
+        {
+            id: 3,
+            src: 'https://unsplash.it/400/300?image=1003'
+        },
+        {
+            id: 4,
+            src: 'https://unsplash.it/400/300?image=940'
+        },
+        {
+            id: 5,
+            src: 'https://unsplash.it/400/300?image=944'
+        },
+        {
+            id: 6,
+            src: 'https://source.unsplash.com/mEr7U5yfYt8/400x300'
+        },
+        {
+            id: 7,
+            src: 'https://unsplash.it/400/300?image=1041'
+        }
+    ]
   })
 }
 </script>
