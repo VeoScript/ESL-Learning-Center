@@ -44,12 +44,12 @@
                       <b-col sm="12">
                         <b-form-group>
                           <b-form-input 
-                            placeholder="Phone Number"
-                            v-model.trim="$v.phone.$model"
-                            :class="{ 'is-invalid' : $v.phone.$error, 'is-valid' : !$v.phone.$invalid }"
+                            placeholder="Contact Number"
+                            v-model.trim="$v.contact.$model"
+                            :class="{ 'is-invalid' : $v.contact.$error, 'is-valid' : !$v.contact.$invalid }"
                           ></b-form-input>
                           <div class="invalid-feedback feedback">
-                              <span v-if="!$v.phone.required">Phone Number is required</span>
+                              <span v-if="!$v.contact.required">Contact Number is required</span>
                           </div>
                         </b-form-group>
                       </b-col>  <!-- Phone Number Text Field and Validations -->
@@ -129,6 +129,8 @@
 
 <script>
 
+  import { ADD_INBOX_MUTATION } from '@/graphql/mutations'
+
   import { required, minLength, maxLength, email } from 'vuelidate/lib/validators'
 
   export default {
@@ -139,7 +141,7 @@
       return {
         name: null,
         email: null,
-        phone: null,
+        contact: null,
         message: null
       }
     },
@@ -155,7 +157,7 @@
         required,
         email
       },
-      phone: {
+      contact: {
         required
       },
       message: {
@@ -170,7 +172,25 @@
         if (this.$v.$touch()) return
 
         if (!this.$v.$invalid) {
-          this.onResetForm()
+          
+          const {
+            name,
+            email,
+            contact,
+            message
+          } = this.$data
+
+          this
+           .$apollo
+           .mutate({
+             mutation: ADD_INBOX_MUTATION,
+             variables : { name, email, contact, message }
+           })
+           .then(() => {
+              this.onResetForm()
+              alert('Good Job!')
+           })
+           .catch(error => console.log(error))
         }
       },
 
@@ -179,7 +199,7 @@
         this.$v.$reset()
         this.name = null
         this.email = null
-        this.phone = null
+        this.contact = null
         this.message = null
       }
     }
