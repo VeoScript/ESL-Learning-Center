@@ -207,7 +207,7 @@
            })
            .then(() => {
               this.onResetForm()
-              toastAlertStatus('You message Successfully Send', 'success')
+              toastAlertStatus('You message successfully sent', 'success')
            })
            .catch(error => {
              toastAlertStatus(error, 'success')
