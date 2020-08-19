@@ -18,6 +18,7 @@
                             placeholder="Name"
                             v-model.trim="$v.name.$model"
                             :class="{ 'is-invalid' : $v.name.$error, 'is-valid' : !$v.name.$invalid }"
+                            :disabled="loading"
                           ></b-form-input>
                           <div class="invalid-feedback feedback">
                               <span v-if="!$v.name.required">Name is required</span>
@@ -33,6 +34,7 @@
                             placeholder="Email"
                             v-model.trim="$v.email.$model"
                             :class="{ 'is-invalid' : $v.email.$error, 'is-valid' : !$v.email.$invalid }"
+                            :disabled="loading"
                           ></b-form-input>
                           <div class="invalid-feedback feedback">
                               <span v-if="!$v.email.required">Email is required</span>
@@ -47,6 +49,7 @@
                             placeholder="Contact Number"
                             v-model.trim="$v.contact.$model"
                             :class="{ 'is-invalid' : $v.contact.$error, 'is-valid' : !$v.contact.$invalid }"
+                            :disabled="loading"
                           ></b-form-input>
                           <div class="invalid-feedback feedback">
                               <span v-if="!$v.contact.required">Contact Number is required</span>
@@ -62,6 +65,7 @@
                             rows="4"
                             v-model.trim="$v.message.$model"
                             :class="{ 'is-invalid' : $v.message.$error, 'is-valid' : !$v.message.$invalid }"
+                            :disabled="loading"
                           ></b-form-textarea>
                           <div class="invalid-feedback feedback">
                               <span v-if="!$v.message.required">Your message is required</span>
@@ -83,9 +87,19 @@
                         <b-button 
                           variant="primary"
                           @click="onSubmitForm"
+                          v-if="!loading"
                         >
                           <b-icon icon="chat-square-dots-fill"></b-icon> Send
                         </b-button> <!-- Button Submit -->
+
+                        <b-button 
+                            v-else 
+                            variant="primary" 
+                            disabled 
+                        >
+                            <b-spinner small type="grow"></b-spinner>
+                            Loading...
+                        </b-button>
 
                       </b-button-group>
 
@@ -142,7 +156,8 @@
         name: null,
         email: null,
         contact: null,
-        message: null
+        message: null,
+        loading: false
       }
     },
 
@@ -172,6 +187,8 @@
         if (this.$v.$touch()) return
 
         if (!this.$v.$invalid) {
+
+          this.loading = true
           
           const {
             name,
@@ -187,10 +204,14 @@
              variables : { name, email, contact, message }
            })
            .then(() => {
+              this.loading = false
               this.onResetForm()
               alert('Good Job!')
            })
-           .catch(error => console.log(error))
+           .catch(error => {
+
+             this.onSubmitForm()
+           })
         }
       },
 
@@ -201,6 +222,7 @@
         this.email = null
         this.contact = null
         this.message = null
+        this.loading = false
       }
     }
 
