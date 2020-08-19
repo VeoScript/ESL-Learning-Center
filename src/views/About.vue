@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-     <welcome-page 
+     <front-page 
        :sideImage="sideImage"
        :title="title"
        :description="description"
@@ -48,7 +48,7 @@ export default {
   name: 'About',
 
   components: {
-    WelcomePage: () => import('@/components/WelcomePage'),
+    FrontPage: () => import('@/components/mixins/FrontPage'),
     OurStaffSection: () => import('@/components/OurStaffSection'),
     CarouselOverflow: () => import('@/components/CarouselOverflow'),
     CarrerSection: () => import('@/components/CarrerSection')

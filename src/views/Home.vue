@@ -1,6 +1,6 @@
 <template>
   <div>
-    <welcome-page 
+    <front-page 
        :sideImage="sideImage"
        :title="title"
        :description="description"
@@ -16,7 +16,7 @@
   export default {
     name: "Home",
     components: {
-      WelcomePage: () => import('@/components/WelcomePage'),
+      FrontPage: () => import('@/components/mixins/FrontPage'),
       VisionMission: () => import('@/components/VisionMission'),
       ConnectWithUs: () => import("@/components/ConnectWithUs"),
       HorizontalList: () => import('@/components/HorizontalList')
