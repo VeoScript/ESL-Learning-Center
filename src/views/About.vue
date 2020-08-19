@@ -39,7 +39,6 @@
         <carrer-section />
       </b-container>
      </div>
-     <foot-bar />
   </div>
 </template>
 
@@ -52,8 +51,7 @@ export default {
     WelcomePage: () => import('@/components/WelcomePage'),
     OurStaffSection: () => import('@/components/OurStaffSection'),
     CarouselOverflow: () => import('@/components/CarouselOverflow'),
-    CarrerSection: () => import('@/components/CarrerSection'),
-    FootBar: () => import("@/components/FootBar"),
+    CarrerSection: () => import('@/components/CarrerSection')
   },
 
   data: () => ({
