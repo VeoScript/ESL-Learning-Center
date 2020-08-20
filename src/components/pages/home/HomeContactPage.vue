@@ -5,7 +5,7 @@
         <b-col sm="12">
           <b-card>
             <b-row>
-              <b-col md="6">
+              <b-col md="6" data-aos="flip-up">
                 <b-card-body title="Contact Us" id="box3">
                   <hr />
 
@@ -108,7 +108,7 @@
                 </b-card-body>
 
               </b-col>
-              <b-col md="6">
+              <b-col md="6" data-aos="flip-down">
                 <b-card-body title="Connect With Us" id="box1">
                   <hr />
                   <div class="col-lg-12 col-md-12 col-sm-12 contact-w3-agile1" data-aos="flip-right">

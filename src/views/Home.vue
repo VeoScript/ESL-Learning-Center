@@ -27,6 +27,7 @@
                 tag="article"
                 class="mb-2 item"
                 fluid
+                data-aos="flip-left"
               >
                 <b-card-text style="overflow-wrap: break-word;">
                   {{ item.content }}
