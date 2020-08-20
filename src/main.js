@@ -12,6 +12,7 @@ import VueGoodWizard from 'vue-good-wizard'
 import Carousel3d from 'vue-carousel-3d'
 import Vuelidate from 'vuelidate'
 import { apolloProvider } from '@/services'
+import AOS from 'aos'
 
  
 Vue.config.productionTip = false;
@@ -27,9 +28,15 @@ Vue.use(VueGoodWizard)
 Vue.use(Carousel3d)
 Vue.use(Vuelidate)
 
+
+import 'aos/dist/aos.css'
+
 new Vue({
   router,
   store,
   apolloProvider,
+  created () {
+    AOS.init()
+  },
   render: h => h(App)
 }).$mount("#app")
