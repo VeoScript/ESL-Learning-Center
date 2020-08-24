@@ -5,44 +5,110 @@
         <b-col sm="12">
           <b-card>
             <b-row>
-              <b-col md="6">
+              <b-col md="6" data-aos="flip-up">
                 <b-card-body title="Contact Us" id="box3">
                   <hr />
-                  <b-row>
-                    <b-col sm="12">
-                      <b-form-group>
-                        <b-form-input placeholder="Name"></b-form-input>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12">
-                      <b-form-group>
-                        <b-form-input placeholder="Email"></b-form-input>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12">
-                      <b-form-group>
-                        <b-form-input placeholder="Cell Number"></b-form-input>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12">
-                      <b-form-group>
-                        <b-form-textarea
-                          placeholder="Message"
-                          rows="4"
-                        ></b-form-textarea>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12">
-                      <b-form-group>
-                        <b-button block variant="info">
-                           <b-icon icon="chat-square-dots-fill"></b-icon> Send Message
+
+                  <b-form>
+                    <b-row>
+                      
+                      <b-col sm="12">
+                        <b-form-group>
+                          <b-form-input 
+                            placeholder="Name"
+                            v-model.trim="$v.name.$model"
+                            :class="{ 'is-invalid' : $v.name.$error, 'is-valid' : !$v.name.$invalid }"
+                            :disabled="loading"
+                          ></b-form-input>
+                          <div class="invalid-feedback feedback">
+                              <span v-if="!$v.name.required">Name is required</span>
+                              <span v-if="!$v.name.minLength">Name must have at least {{ $v.name.$params.minLength.min }} letters.</span>
+                              <span v-if="!$v.name.maxLength">Name must have at most {{ $v.name.$params.maxLength.max }} letters.</span>
+                          </div>
+                        </b-form-group>
+                      </b-col> <!-- Name Text Field and Validations -->
+
+                      <b-col sm="12">
+                        <b-form-group>
+                          <b-form-input 
+                            placeholder="Email"
+                            v-model.trim="$v.email.$model"
+                            :class="{ 'is-invalid' : $v.email.$error, 'is-valid' : !$v.email.$invalid }"
+                            :disabled="loading"
+                          ></b-form-input>
+                          <div class="invalid-feedback feedback">
+                              <span v-if="!$v.email.required">Email is required</span>
+                              <span v-if="!$v.email.email">Email is invalid.</span>
+                          </div>
+                        </b-form-group>
+                      </b-col> <!-- Email Text Field and Validations -->
+
+                      <b-col sm="12">
+                        <b-form-group>
+                          <b-form-input 
+                            placeholder="Contact Number"
+                            v-model.trim="$v.contact.$model"
+                            :class="{ 'is-invalid' : $v.contact.$error, 'is-valid' : !$v.contact.$invalid }"
+                            :disabled="loading"
+                          ></b-form-input>
+                          <div class="invalid-feedback feedback">
+                              <span v-if="!$v.contact.required">Contact Number is required</span>
+                          </div>
+                        </b-form-group>
+                      </b-col>  <!-- Phone Number Text Field and Validations -->
+
+
+                      <b-col sm="12">
+                        <b-form-group>
+                          <b-form-textarea
+                            placeholder="Message"
+                            rows="4"
+                            v-model.trim="$v.message.$model"
+                            :class="{ 'is-invalid' : $v.message.$error, 'is-valid' : !$v.message.$invalid }"
+                            :disabled="loading"
+                          ></b-form-textarea>
+                          <div class="invalid-feedback feedback">
+                              <span v-if="!$v.message.required">Your message is required</span>
+                          </div>
+                        </b-form-group>
+                      </b-col> <!-- Message Text Field and Validations -->
+
+
+                    </b-row>
+                    <b-button-group style="width: 100%;">
+
+                        <b-button 
+                          variant="outline-secondary"
+                          @click="onResetForm"
+                        >
+                          <b-icon icon="x"></b-icon> Cancel
+                        </b-button> <!-- Button Reset -->
+
+                        <b-button 
+                          variant="primary"
+                          @click="onSubmitForm"
+                          v-if="!loading"
+                        >
+                          <b-icon icon="chat-square-dots-fill"></b-icon> Send
+                        </b-button> <!-- Button Submit -->
+
+                        <b-button 
+                            v-else 
+                            variant="primary" 
+                            disabled 
+                        >
+                            <b-spinner small type="grow"></b-spinner>
+                            Loading...
                         </b-button>
-                      </b-form-group>
-                    </b-col>
-                  </b-row>
+
+                      </b-button-group>
+
+                  </b-form>
+
                 </b-card-body>
+
               </b-col>
-              <b-col md="6">
+              <b-col md="6" data-aos="flip-down">
                 <b-card-body title="Connect With Us" id="box1">
                   <hr />
                   <div class="col-lg-12 col-md-12 col-sm-12 contact-w3-agile1" data-aos="flip-right">
@@ -75,6 +141,95 @@
   </div>
 </template>
 
+<script>
+
+  import { toastAlertStatus } from '@/utils'
+
+  import { ADD_INBOX_MUTATION } from '@/graphql/mutations'
+
+  import { required, minLength, maxLength, email } from 'vuelidate/lib/validators'
+
+  export default {
+    name: 'home-contact-page',
+
+    // Data initialization
+    data () {
+      return {
+        name: null,
+        email: null,
+        contact: null,
+        message: null,
+        loading: false
+      }
+    },
+
+    // Validation Rules
+    validations: {
+      name: {
+        required,
+        minLength: minLength(3),
+        maxLength: maxLength(20)
+      },
+      email: {
+        required,
+        email
+      },
+      contact: {
+        required
+      },
+      message: {
+        required
+      }
+    },
+
+    methods: {
+
+      // Submit Function
+      onSubmitForm () {
+        if (this.$v.$touch()) return
+
+        if (!this.$v.$invalid) {
+
+          this.loading = true
+          
+          const {
+            name,
+            email,
+            contact,
+            message
+          } = this.$data
+
+          this
+           .$apollo
+           .mutate({
+             mutation: ADD_INBOX_MUTATION,
+             variables : { name, email, contact, message }
+           })
+           .then(() => {
+              this.onResetForm()
+              toastAlertStatus('You message successfully sent', 'success')
+           })
+           .catch(error => {
+             toastAlertStatus(error, 'success')
+             this.onSubmitForm()
+           })
+        }
+      },
+
+      // Reset Form Function
+      onResetForm () {
+        this.$v.$reset()
+        this.name = null
+        this.email = null
+        this.contact = null
+        this.message = null
+        this.loading = false
+      }
+    }
+
+  }
+</script>
+
 <style lang="scss" scoped>
 
 .card {
@@ -88,7 +243,7 @@
   // background: #17242a;
   // color: #6cc4c5;
   border: 1px solid #eee;
-  height: 430px;
+  min-height: 430px;
 
   .card-text {
     padding: 10px;
@@ -98,7 +253,7 @@
 #box2 {
   // background: #2b7a77;
   color: teal;
-  height: 430px;
+  min-height: 430px;
 
   .card-text {
     color: teal;
@@ -109,7 +264,7 @@
 #box3 {
   // background: #17242a;
   // color: #6cc4c5;
-  height: 430px;
+  min-height: 430px;
   border: 1px solid #eee;
 
   .card-text {

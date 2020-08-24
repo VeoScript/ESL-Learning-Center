@@ -1,18 +1,30 @@
 <template>
+
   <div id="app">
-    <the-nav-bar />
-    <vue-page-transition name="fade-in-right" class="content">
-      <router-view />
-    </vue-page-transition>
-    <the-foot-bar />
+
+    <the-nav-bar 
+    /> <!--The Navigation Bar -->
+
+      <vue-page-transition name="fade-in-right" class="content">
+
+        <router-view />
+
+      </vue-page-transition> <!-- Dynamic Data Content -->
+
+      <scroll-to-top /> <!-- Scroll Back To Top -->
+
+    <the-foot-bar /> <!-- The Footer bar info -->
+
   </div>
+
 </template>
 
 <script>
   export default {
     components: {
       TheNavBar: () => import("@/components/layouts/TheNavBar.vue"),
-      TheFootBar: () => import("@/components/layouts/TheFootBar")
+      TheFootBar: () => import("@/components/layouts/TheFootBar"),
+      ScrollToTop: () => import('@/components/mixins/ScrollToTop')
     }
   }
 </script>
