@@ -28,6 +28,7 @@
                 class="mb-2 item"
                 fluid
                 data-aos="flip-left"
+                data-aos-duration="1000"
               >
                 <b-card-text style="overflow-wrap: break-word;">
                   {{ item.content }}

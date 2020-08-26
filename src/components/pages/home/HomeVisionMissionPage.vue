@@ -3,7 +3,7 @@
     <b-container class="carddetails">
       <b-card>
         <b-row>
-          <b-col md="6" data-aos="flip-left">
+          <b-col md="6" data-aos="flip-left" data-aos-duration="1000">
             <b-card-body>
               <h1><b-icon icon="brightness-high-fill"></b-icon> VISION</h1>
               <p>
@@ -13,7 +13,7 @@
               </p>
             </b-card-body>
           </b-col>
-          <b-col md="6" data-aos="flip-right">
+          <b-col md="6" data-aos="flip-right" data-aos-duration="1000">
             <b-card-body>
               <h1><b-icon icon="brightness-high"></b-icon> MISSION</h1>
               <p>
