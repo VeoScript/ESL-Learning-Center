@@ -64,7 +64,7 @@
                 Contacts
               </b-nav-item>
               <b-nav-item>
-                <b-button variant="outline-primary" size="sm">
+                <b-button variant="outline-primary" size="sm" v-b-modal.register-modal>
                   <b-icon icon="person-plus-fill"></b-icon> Register
                 </b-button>
               </b-nav-item>
@@ -78,16 +78,25 @@
         </b-collapse>
       </b-navbar>
     </b-container>
+
+    <register /> <!-- Regsiter vue comopnent -->
+
   </div>
 </template>
 
 <script>
   export default {
-    name: "Navbar",
+    name: 'nav-bar',
+
+    components: {
+      Register: () => import('@/views/Register')
+    },
     
-    data: () => ({
-      toggle: false
-    })
+    data () {
+      return {
+        toggle: false
+      }
+    }
   }
 </script>
 
