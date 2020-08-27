@@ -23,8 +23,13 @@ const routes = [
     path: '/lessons',
     name: 'lessons',
     component: () => import('@/views/Lessons')
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import('@/views/Register')
   }
-];
+]
 
 
 const router = new VueRouter({
