@@ -70,7 +70,7 @@
               </b-nav-item>
               <b-nav-item>
                 <b-button variant="primary" size="sm">
-                  <b-icon icon="person-plus-fill"></b-icon> Login
+                  <b-icon icon="lock-fill"></b-icon> Login
                 </b-button>
               </b-nav-item>
             </b-navbar-nav>
