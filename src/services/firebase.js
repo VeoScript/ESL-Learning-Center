@@ -15,10 +15,10 @@ const firebaseConfig = {
 
 // firebase utils
 const fb = firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore()
-const auth = firebase.auth()
+const db = fb.firestore()
+const auth = fb.auth()
 const currentUser = auth.currentUser
-const messaging = firebase.messaging()
+const messaging = fb.messaging()
 
 export {
   fb,
