@@ -69,7 +69,7 @@
                 </b-button>
               </b-nav-item>
               <b-nav-item>
-                <b-button variant="primary" size="sm" pill>
+                <b-button variant="outline-primary" size="sm" pill>
                   <b-icon icon="lock-fill"></b-icon> Login
                 </b-button>
               </b-nav-item>
