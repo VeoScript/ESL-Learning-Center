@@ -63,25 +63,15 @@
               </b-icon>
                 Contacts
               </b-nav-item>
-              <b-nav-item 
-                href="#"
-                to="/register"
-              :class="$route.path === '/register' ? 'active font-weight-bold' : ''"
-              >
-               <b-icon 
-                :icon="$route.path === '/register' ? 'person-plus-fill' : 'person-plus'">
-              </b-icon>
-                Register
+              <b-nav-item>
+                <b-button variant="outline-primary" size="sm">
+                  <b-icon icon="person-plus-fill"></b-icon> Register
+                </b-button>
               </b-nav-item>
-              <b-nav-item 
-                href="#"
-                :class="$route.path === '/login' ? 'active font-weight-bold' : ''"
-                to="/login"
-              >
-               <b-icon 
-                :icon="$route.path === '/login' ? 'lock-fill' : 'lock'">
-              </b-icon>
-                Login
+              <b-nav-item>
+                <b-button variant="primary" size="sm">
+                  <b-icon icon="person-plus-fill"></b-icon> Login
+                </b-button>
               </b-nav-item>
             </b-navbar-nav>
           </b-navbar-nav>
