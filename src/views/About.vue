@@ -14,9 +14,9 @@
               <b-col md="6" data-aos="zoom-in">
                   <b-img class="side-image" width="180" src="@/assets/photos/communication.png"></b-img>
               </b-col>
-              <b-col md="6" class="text-center">
+              <b-col md="6" class="text-center" data-aos="zoom-in">
                   <h2>Company Profile</h2>
-                  <p style="text-align: justify;" data-aos="zoom-in">
+                  <p style="text-align: justify;">
                     A partnership of a two good friends Victor and Nicholas.  An overseas workers, originally from the Philippines and the United States of America who met in the middle of war zone projects, working 7 days a week and 12-16 hours a day depends with the complexity of work to provide logistics and construction management support of NATO troops stationed in Middle East. Victor is a teacher and Nicholas is a civil Engineer,  they both have a work background in Estimating, Construction management and Business English.  It has been their long dream to have their own company that completely benefits the hardworking individuals who strives to uplift the quality of their life and the community. It has been our nature to provide quality service to the client and develop strong and long term relationship. Our goal is to help other's dream come to reality, especially those who are living in the remote areas and small villages. Big Cities are too congested with business and workers fighting the agony of being far away from home. With the Victor Air class Solutions we are determined to take commitment in working together with both young  and seasoned professionals’ teachers and Subject Matter Experts (SMEs) dedicated to impart their expertise and passion. May 28, 2020 we developed a challenging plan to start with company "Victors Air Class Solutions" .The company's name is taken from the CEO's' name and Nicholas' daughter's name. We provide teaching tools to qualified and teachers and other professionals who has the love and desire to teach online while enjoying their time home with families. We are dedicated to make partnership and teaching support in English and other courses that can be done remotely in a case to case basis.
                   </p>
               </b-col>

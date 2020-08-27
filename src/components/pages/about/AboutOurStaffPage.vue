@@ -3,8 +3,8 @@
         <b-container class="carddetails">
             <b-card>
                 <b-row>
-                    <b-col md="6">
-                        <b-card-body class="text-center" data-aos="flip-left" data-aos-duration="1000">
+                    <b-col md="6" data-aos="flip-left" data-aos-duration="1000">
+                        <b-card-body class="text-center">
                             <b-img src="https://avatars0.githubusercontent.com/u/26340308?s=460&u=bfa907f2fee8b19b3d7d9ebde07cfe0f33215b19&v=4" width="110" rounded="circle" alt="Circle image"></b-img>
                             <h5 class="font-weight-bold">Jerome Villaruel</h5>
                             <p class="text-muted" style="position: relative; bottom: 10px; font-size: 13px;">Group CEO | Founder</p>
@@ -13,8 +13,8 @@
                             </p>
                         </b-card-body>
                     </b-col>
-                    <b-col md="6">
-                        <b-card-body class="text-center" data-aos="flip-right" data-aos-duration="1000">
+                    <b-col md="6" data-aos="flip-right" data-aos-duration="1000">
+                        <b-card-body class="text-center">
                             <b-img src="https://avatars0.githubusercontent.com/u/38458781?s=460&u=d2e21173ef861da3d8ca3a292398cbc0c6f7c000&v=4" width="110" rounded="circle" alt="Circle image"></b-img>
                             <h5 class="font-weight-bold">Joshua Galit</h5>
                             <p class="text-muted" style="position: relative; bottom: 10px; font-size: 13px;">CTO | Founder</p>

@@ -4,8 +4,6 @@
       :steps="steps"
       :onNext="nextClicked" 
       :onBack="backClicked"
-      data-aos-duration="1000"
-      data-aos="zoom-out"
     >
       <div slot="page1">
         <h4>Step 1</h4>
