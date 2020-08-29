@@ -64,12 +64,12 @@
                 Contacts
               </b-nav-item>
               <b-nav-item>
-                <b-button variant="outline-primary" pill size="sm" v-b-modal.register-modal>
+                <b-button variant="outline-primary" size="sm" v-b-modal.register-modal>
                   <b-icon icon="person-plus-fill"></b-icon> Register
                 </b-button>
               </b-nav-item>
               <b-nav-item>
-                <b-button variant="outline-primary" size="sm" pill>
+                <b-button variant="outline-primary" size="sm">
                   <b-icon icon="lock-fill"></b-icon> Login
                 </b-button>
               </b-nav-item>
