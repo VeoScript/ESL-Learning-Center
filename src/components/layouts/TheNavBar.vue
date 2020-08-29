@@ -37,6 +37,7 @@
                 href="#"
                 :class="$route.path === '/lessons' ? 'active font-weight-bold' : ''"
                 to="/lessons"
+                v-if="isLoggedIn"
               >
                 <b-icon 
                   :icon="$route.path === '/lessons' ? 'file-post' : 'file-text'">
@@ -47,6 +48,7 @@
                 href="#"
                 :class="$route.path === '/teachers' ? 'active font-weight-bold' : ''"
                 to="/teachers"
+                v-if="isLoggedIn"
               >
                 <b-icon 
                   :icon="$route.path === '/teachers' ? 'people-fill' : 'people'">
@@ -63,12 +65,12 @@
               </b-icon>
                 Contacts
               </b-nav-item>
-              <b-nav-item>
+              <b-nav-item v-if="!isLoggedIn">
                 <b-button variant="outline-primary" size="sm" v-b-modal.register-modal>
                   <b-icon icon="person-plus-fill"></b-icon> Register
                 </b-button>
               </b-nav-item>
-              <b-nav-item>
+              <b-nav-item v-if="!isLoggedIn">
                 <b-button variant="outline-primary" size="sm" v-b-modal.login-modal>
                   <b-icon icon="lock-fill"></b-icon> Login
                 </b-button>
@@ -87,6 +89,9 @@
 </template>
 
 <script>
+
+  import { auth } from '@/services'
+
   export default {
     name: 'nav-bar',
 
@@ -97,7 +102,8 @@
     
     data () {
       return {
-        toggle: false
+        toggle: false,
+        isLoggedIn: auth.currentUser
       }
     }
   }
