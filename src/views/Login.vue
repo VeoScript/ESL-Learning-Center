@@ -85,6 +85,8 @@
 
 <script>
 
+    import { auth } from '@/services'
+
     import { toastAlertStatus } from '@/utils'
 
     import { required, email } from 'vuelidate/lib/validators'
@@ -117,7 +119,7 @@
         },
 
         methods: {
-            
+
             onClickToggleShowPassword() {
                 let show = document.getElementById('password')
                 if(this.showpassword == false) {
@@ -143,7 +145,26 @@
                 if (this.$v.$invalid) {
                     this.autoFocusTextFields ()
                 } else {
-                    alert('Good Job!')
+
+                    this.loading = true
+
+                    const formData = {
+                        email: this.email,
+                        password: this.password
+                    }
+
+                    auth
+                     .signInWithEmailAndPassword(formData.email, formData.password)
+                     .then(() => {
+                        toastAlertStatus('Successfully Login', 'success')
+                        this.$bvModal.hide('login-modal')
+                        this.onClickResetForm ()
+                     })
+                     .catch(error => {
+                        this.loading = false
+                        this.error = error
+                        toastAlertStatus(error, 'error')
+                     })
                 }
             },
 
