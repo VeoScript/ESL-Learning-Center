@@ -69,7 +69,7 @@
                 </b-button>
               </b-nav-item>
               <b-nav-item>
-                <b-button variant="outline-primary" size="sm">
+                <b-button variant="outline-primary" size="sm" v-b-modal.login-modal>
                   <b-icon icon="lock-fill"></b-icon> Login
                 </b-button>
               </b-nav-item>
@@ -81,6 +81,8 @@
 
     <register /> <!-- Regsiter vue comopnent -->
 
+    <login /> <!-- Login vue component -->
+
   </div>
 </template>
 
@@ -89,7 +91,8 @@
     name: 'nav-bar',
 
     components: {
-      Register: () => import('@/views/Register')
+      Register: () => import('@/views/Register'),
+      Login: () => import('@/views/Login')
     },
     
     data () {
