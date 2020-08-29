@@ -5,7 +5,7 @@
         <b-col sm="12">
           <b-card>
             <b-row>
-              <b-col md="6" data-aos="flip-up">
+              <b-col md="6" data-aos="flip-up" data-aos-duration="1000">
                 <b-card-body title="Contact Us" id="box3">
                   <hr />
 

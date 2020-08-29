@@ -3,7 +3,8 @@
     <vue-good-wizard 
       :steps="steps"
       :onNext="nextClicked" 
-      :onBack="backClicked">
+      :onBack="backClicked"
+    >
       <div slot="page1">
         <h4>Step 1</h4>
         <b-row>
