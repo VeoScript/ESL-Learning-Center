@@ -23,6 +23,7 @@
                             v-model.trim="$v.firstname.$model"
                             :class="{ 'is-invalid' : $v.firstname.$error, 'is-valid' : !$v.firstname.$invalid }"
                             :disabled="loading"
+                            ref="firstname"
                         ></b-form-input>
                         <div class="invalid-feedback feedback">
                             <span v-if="!$v.firstname.required">Firstname is required</span>
@@ -38,6 +39,8 @@
                             v-model.trim="$v.lastname.$model"
                             :class="{ 'is-invalid' : $v.lastname.$error, 'is-valid' : !$v.lastname.$invalid }"
                             :disabled="loading"
+                            ref="lastname"
+
                         ></b-form-input>
                         <div class="invalid-feedback feedback">
                             <span v-if="!$v.lastname.required">Lastname is required</span>
@@ -54,6 +57,7 @@
                             v-model.trim="$v.contact.$model"
                             :class="{ 'is-invalid' : $v.contact.$error, 'is-valid' : !$v.contact.$invalid }"
                             :disabled="loading"
+                            ref="contact"
                         ></b-form-input>
                         <div class="invalid-feedback feedback">
                             <span v-if="!$v.contact.required">Phone is required</span>
@@ -67,6 +71,7 @@
                             v-model.trim="$v.genderSelected.$model"
                             :class="{ 'is-invalid' : $v.genderSelected.$error, 'is-valid' : !$v.genderSelected.$invalid }"
                             :disabled="loading"
+                            ref="genderSelected"
                         ></b-form-select>
                         <div class="invalid-feedback feedback">
                             <span v-if="!$v.genderSelected.required">Gender is required</span>
@@ -82,6 +87,7 @@
                             v-model.trim="$v.email.$model"
                             :class="{ 'is-invalid' : $v.email.$error, 'is-valid' : !$v.email.$invalid }"
                             :disabled="loading"
+                            ref="email"
                         ></b-form-input>
                         <div class="invalid-feedback feedback">
                             <span v-if="!$v.email.required">Email is required</span>
@@ -92,10 +98,11 @@
                 <b-col>
                     <b-form-group label="Password">
                         <div class="input-group">
-                                <input 
+                            <input 
                                 type="password" 
                                 id="password"
                                 class="form-control" 
+                                ref="password"
                                 v-model.trim="$v.password.$model"
                                 :class="{ 'is-invalid' : $v.password.$error, 'is-valid' : !$v.password.$invalid }"
                                 :disabled="loading"
@@ -129,6 +136,7 @@
                                 autocomplete="off"
                                 :class="{ 'is-invalid' : $v.birthdate.$error, 'is-valid' : !$v.birthdate.$invalid }"
                                 :disabled="loading"
+                                ref="birthdate"
                             ></b-form-input>
                             <b-input-group-append>
                                 <b-form-datepicker
@@ -269,8 +277,9 @@
             onClickSubmitForm () {
                 this.$v.$touch()
 
-                if (!this.$v.$invalid) {
-
+                if (this.$v.$invalid) {
+                    this.autoFocusTextFields()
+                } else {
                     this.loading = true
 
                     const formData = {
@@ -294,7 +303,6 @@
                         this.error = error
                         toastAlertStatus(error, 'error')
                      })
-
                 }
             },
 
@@ -334,6 +342,25 @@
                 } else {
                     this.showpassword = false
                     show.type = 'password'
+                }
+            },
+
+            autoFocusTextFields () {
+                // 1. Loop the keys
+                for (let key in Object.keys(this.$v)) {
+                    // 2. Extract the input
+                    const input = Object.keys(this.$v)[key];
+                    // 3. Remove special properties
+                    if (input.includes("$")) return false;
+
+                    // 4. Check for errors
+                    if (this.$v[input].$error) {
+                        // 5. Focus the input with the error
+                        this.$refs[input].focus();
+
+                        // 6. Break out of the loop
+                        break;
+                    }
                 }
             }
         }
