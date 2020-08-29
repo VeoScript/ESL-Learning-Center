@@ -18,6 +18,7 @@
                     v-model.trim="$v.email.$model"
                     :class="{ 'is-invalid' : $v.email.$error, 'is-valid' : !$v.email.$invalid }"
                     :disabled="loading"
+                    @keyup.enter="onClickSubmitForm"
                     ref="email"
                 ></b-form-input>
                 <div class="invalid-feedback feedback">
@@ -35,6 +36,7 @@
                         v-model.trim="$v.password.$model"
                         :class="{ 'is-invalid' : $v.password.$error, 'is-valid' : !$v.password.$invalid }"
                         :disabled="loading"
+                        @keyup.enter="onClickSubmitForm"
                     >
                     <div class="input-group-append" @click="onClickToggleShowPassword" style="cursor: pointer;">
                         <i v-if="!showpassword" class="input-group-text">
