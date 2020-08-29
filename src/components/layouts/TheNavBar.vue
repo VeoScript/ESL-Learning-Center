@@ -12,7 +12,7 @@
         </b-navbar-toggle>
         <b-collapse v-model="toggle" is-nav>
           <b-navbar-nav class="ml-auto">
-            <b-navbar-nav class="d-flex justify-content-center align-items-center">
+            <b-navbar-nav class="d-flex justify-content-center align-items-center oruar=">
 
               <!-- HOME PAGE -->
               <b-nav-item 
@@ -48,7 +48,7 @@
                 v-if="!isLoggedIn"
               >
                 <b-icon 
-                  :icon="$route.path === '/about' ? 'person-check-fill' : 'person-check'">
+                  :icon="$route.path === '/about' ? 'info-circle-fill' : 'info-circle'">
                 </b-icon> 
                 About
               </b-nav-item>
@@ -101,7 +101,7 @@
                 v-if="!isLoggedIn"
               >
                <b-icon 
-                :icon="$route.path === '/contacts' ? 'chat-square-dots-fill' : 'chat-square-dots'">
+                :icon="$route.path === '/contacts' ? 'chat-dots-fill' : 'chat-dots'">
               </b-icon>
                 Contacts
               </b-nav-item>
