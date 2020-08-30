@@ -162,8 +162,8 @@
     name: 'nav-bar',
 
     components: {
-      Register: () => import('@/views/Register'),
-      Login: () => import('@/views/Login')
+      Register: () => import('@/views/public/Register'),
+      Login: () => import('@/views/public/Login')
     },
     
     data () {
