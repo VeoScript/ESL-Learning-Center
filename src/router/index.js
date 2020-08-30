@@ -46,12 +46,12 @@ const routes = [
   {
     path: '/teachers',
     name: 'teachers',
-    component: () => import('@/views/protected/Dashboard')
+    component: () => import('@/views/protected/Teachers')
   },
   {
     path: '/profile/:id',
     name: 'profile',
-    component: () => import('@/views/protected/Dashboard')
+    component: () => import('@/views/protected/Profile')
   }
   // End Protected Route
 ]
