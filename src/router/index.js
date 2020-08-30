@@ -35,7 +35,8 @@ const routes = [
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: () => import('@/views/protected/Dashboard')
+    component: () => import('@/views/protected/Dashboard'),
+    meta: { requiresAuth: true }
   },
   {
     path: '/lessons',
@@ -46,12 +47,14 @@ const routes = [
   {
     path: '/teachers',
     name: 'teachers',
-    component: () => import('@/views/protected/Teachers')
+    component: () => import('@/views/protected/Teachers'),
+    meta: { requiresAuth: true }
   },
   {
     path: '/profile/:id',
     name: 'profile',
-    component: () => import('@/views/protected/Profile')
+    component: () => import('@/views/protected/Profile'),
+    meta: { requiresAuth: true }
   }
   // End Protected Route
 ]
