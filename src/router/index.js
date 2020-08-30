@@ -5,11 +5,14 @@ import { auth } from '@/services'
 Vue.use(VueRouter);
 
 const routes = [
+  // Not Found Page
   {
     path: '*',
     name: '404-not-found',
     component: () => import('@/components/errors/404')
   },
+
+  // Public Route
   {
     path: '/',
     name: 'home',
@@ -25,12 +28,32 @@ const routes = [
     name: 'services',
     component: () => import('@/views/public/Services')
   },
+  // End Public Route
+
+
+  // Protected Route
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: () => import('@/views/protected/Dashboard')
+  },
   {
     path: '/lessons',
     name: 'lessons',
     component: () => import('@/views/protected/Lessons'),
     meta: { requiresAuth: true }
+  },
+  {
+    path: '/teachers',
+    name: 'teachers',
+    component: () => import('@/views/protected/Dashboard')
+  },
+  {
+    path: '/profile/:id',
+    name: 'profile',
+    component: () => import('@/views/protected/Dashboard')
   }
+  // End Protected Route
 ]
 
 
