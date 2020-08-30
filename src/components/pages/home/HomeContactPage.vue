@@ -210,7 +210,7 @@
               toastAlertStatus('You message successfully sent', 'success')
            })
            .catch(error => {
-             toastAlertStatus(error, 'success')
+             toastAlertStatus(error, 'error')
              this.onSubmitForm()
            })
         }
