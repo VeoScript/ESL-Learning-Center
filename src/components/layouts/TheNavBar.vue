@@ -110,7 +110,7 @@
               <b-nav-item 
                 href="#"
                 :class="$route.path === '/profile' ? 'active font-weight-bold' : ''"
-                to="/profile"
+                :to="`/profile/${currentUserId}`"
                 v-if="isLoggedIn"
               >
                <b-icon 
@@ -154,7 +154,7 @@
 
 <script>
 
-  import { auth } from '@/services'
+  import { auth, currentUser } from '@/services'
 
   import { toastAlertStatus } from '@/utils'
 
@@ -175,6 +175,9 @@
     computed: {
       isLoggedIn () {
         return auth.currentUser
+      },
+      currentUserId () {
+        return auth.currentUser.uid
       }
     },
 
