@@ -23,7 +23,7 @@ const routes = [
   {
     path: '/lessons',
     name: 'lessons',
-    component: () => import('@/views/Lessons'),
+    component: () => import('@/views/protected/Lessons'),
     meta: { requiresAuth: true }
   }
 ]
