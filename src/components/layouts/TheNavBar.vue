@@ -1,7 +1,7 @@
 <template>
   <div class="fixed-top top">
     <b-container>
-      <b-navbar toggleable="lg" variant="fade" type="light">
+      <b-navbar toggleable="lg" type="light">
         <b-navbar-brand route to="/" class="mb-0">
           <img src="@/assets/photos/logo.png" height="30" alt="Vic Solutions">
         </b-navbar-brand>
@@ -200,6 +200,7 @@
 .top {
   background: white;
   border-bottom: 1px solid rgb(218, 217, 217);
+  border-top: 2px solid rgb(201, 201, 201);
 }
 
 .navbar {
@@ -208,14 +209,4 @@
     color: #445b66;
   }
 }
-
-// .navbar-toggler {
-//   border: none;
-//   background: none;
-// }
-// .navbar-toggler:focus {
-//   border: none;
-//   background: none;
-// }
-
 </style>
