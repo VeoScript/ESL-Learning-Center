@@ -109,12 +109,12 @@
               <!-- PROFILE PAGE -->
               <b-nav-item 
                 href="#"
-                :class="$route.path === '/profile' ? 'active font-weight-bold' : ''"
+                :class="$route.path === `/profile/${currentUserId}` ? 'active font-weight-bold' : ''"
                 :to="`/profile/${currentUserId}`"
                 v-if="isLoggedIn"
               >
                <b-icon 
-                :icon="$route.path === '/profile' ? 'person-fill' : 'person'">
+                :icon="$route.path === `/profile/${currentUserId}` ? 'person-fill' : 'person'">
               </b-icon>
                 Profile
               </b-nav-item>
