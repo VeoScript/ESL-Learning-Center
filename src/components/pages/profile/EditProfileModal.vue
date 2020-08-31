@@ -12,7 +12,7 @@
             :message="`${error}`"
         />
 
-        <b-form @submit.prevent="onClickSubmitForm">
+        <b-form @submit.prevent="onClickSubmitForm(student)">
             
             <b-row>
                 <b-col>
@@ -93,7 +93,7 @@
                         v-if="!loading"
                         block
                         variant="primary"
-                        @click="onClickSubmitForm"
+                        @click="onClickSubmitForm(student)"
                     >Save</b-button>
                     <b-button 
                         v-else 
@@ -117,7 +117,7 @@
 
     import { toastAlertStatus } from '@/utils'
 
-    import { ADD_STUDENT_MUTATION } from '@/graphql/mutations'
+    import { ADD_STUDENT_MUTATION, UPDATE_STUDENT_MUTATION } from '@/graphql/mutations'
 
     import { required, minLength, maxLength, email } from 'vuelidate/lib/validators'
 
@@ -149,13 +149,39 @@
             },
 
             onClickResetForm () {
-                this.student = {}
+                this.student = []
                 this.loading = false
                 this.$v.$reset()
             },
 
-            onClickSubmitForm () {
+            onClickSubmitForm (student) {
                 
+                this.loading = true
+
+                this
+                 .$apollo
+                 .mutate({
+                    mutation: UPDATE_STUDENT_MUTATION,
+                    variables: {
+                        id: student.id,
+                        firstname: student.firstname,
+                        lastname: student.lastname,
+                        contact: student.contact,
+                        gender: student.gender,
+                        birth_date: student.birth_date
+                    }
+                 })
+                 .then(() => {
+                     this.loading = false
+                     this.$bvModal.hide('edit-profile-modal')
+                     toastAlertStatus('Successfully Updated!', 'success')
+                 })
+                 .catch(error => {
+                    this.loading = false
+                    this.error = error
+                    toastAlertStatus(error, 'error')
+                 })
+
             },
 
             onClickToggleShowPassword() {
