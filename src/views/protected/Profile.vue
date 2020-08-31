@@ -5,17 +5,21 @@
                 <b-row>
                     <b-col md="2">
                         <b-avatar 
-                            src="https://placekitten.com/300/300" 
+                            v-for="student in students" :key="student.id"
+                            :src="getStudentAvatarUrl(student)" 
                             size="9rem"
                         ></b-avatar>
                     </b-col>
                     <b-col md="9">
-                        <div style="line-height: 5px; margin-top: 16px;">
-                            <b-card-title style="font-size: 2.0rem;">
-                                Joshua Galit
+                        <div 
+                            style="line-height: 5px; margin-top: 16px;"
+                            v-for="(student, index) in students" :key="index"
+                        >
+                            <b-card-title style="font-size: 2.0rem;" class="text-capitalize">
+                                {{ `${student.firstname} ${student.lastname}`}}
                             </b-card-title>
-                            <b-card-text>
-                                joshuaimalay@gmail.com
+                            <b-card-text class="text-lowercase">
+                                {{ student.email }}
                             </b-card-text>
                             <br>
                             <b-button 
@@ -35,6 +39,10 @@
                         </div>
                     </b-col>
                 </b-row>
+                <hr>
+                <b-row style="height: 500px;">
+
+                </b-row>
             </b-card>
         </b-container>
     </div>
@@ -46,15 +54,65 @@
 
     import { toastAlertStatus } from '@/utils'
 
+    import { STUDENT_QUERY } from '@/graphql/queries'
+
+    import { STUDENT_SUBSCRIPTION } from '@/graphql/subscriptions'
+
+    import gql from 'graphql-tag'
+
     export default {
         name: 'profile',
 
+        data () {
+            return {
+                paramsId: this.$route.params.id,
+                students: []
+            }
+        },
+        
         methods: {
             onClickLogout () {  
                 auth
                 .signOut()
-                .then(() => this.$router.push('/'))
+                .then(() => this.$router.push({ name: 'home' }))
                 .catch(error => toastAlertStatus(error, 'error'))
+            },
+            getStudentAvatarUrl (student) {
+                if (student.profile_url === null) 
+                    return 'https://i.pinimg.com/originals/19/b8/d6/19b8d6e9b13eef23ec9c746968bb88b1.jpg'
+                else
+                    return student.profile_url
+            }
+        },
+
+        apollo: {
+            students: {
+                query: STUDENT_QUERY,
+                subscribeToMore: {
+                    document: STUDENT_SUBSCRIPTION,
+                    variables () {
+                        return {
+                            firebase_id: this.paramsId
+                        }
+                    },
+                    updateQuery(previousResult, { subscriptionData }) {
+                        if (previousResult) {
+                            return {
+                                students: [
+                                    ...subscriptionData.data.students
+                                ]
+                            }
+                        }
+                    }
+                },
+                variables () {
+                    return {
+                        firebase_id: this.paramsId
+                    }
+                },
+                result ({ data }) {
+                    this.students = data.students
+                }
             }
         }
     }
