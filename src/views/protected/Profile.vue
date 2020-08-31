@@ -33,9 +33,17 @@
                             <b-button 
                                 variant="primary" 
                                 size="sm"
+                                v-show="paramsId === currentUserId"
+                                v-b-modal.edit-profile-modal
                             >
                                 Edit Profile
                             </b-button>
+
+                            <!-- Edit Profile Modal Show -->
+                            <edit-profile-modal 
+                                :student="student"
+                            />
+
                         </div>
                     </b-col>
                 </b-row>
@@ -58,14 +66,17 @@
 
     import { STUDENT_SUBSCRIPTION } from '@/graphql/subscriptions'
 
-    import gql from 'graphql-tag'
-
     export default {
         name: 'profile',
+
+        components: {
+            EditProfileModal: () => import('@/components/pages/profile/EditProfileModal')
+        },
 
         data () {
             return {
                 paramsId: this.$route.params.id,
+                currentUserId: auth.currentUser.uid,
                 students: []
             }
         },
