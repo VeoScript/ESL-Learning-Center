@@ -1,7 +1,7 @@
 <template>
   <div class="fixed-top top">
     <b-container>
-      <b-navbar toggleable="lg" variant="fade" type="light">
+      <b-navbar toggleable="lg" type="light">
         <b-navbar-brand route to="/" class="mb-0">
           <img src="@/assets/photos/logo.png" height="30" alt="Vic Solutions">
         </b-navbar-brand>
@@ -12,7 +12,7 @@
         </b-navbar-toggle>
         <b-collapse v-model="toggle" is-nav>
           <b-navbar-nav class="ml-auto">
-            <b-navbar-nav class="d-flex justify-content-center align-items-center">
+            <b-navbar-nav class="d-flex justify-content-center align-items-center oruar=">
 
               <!-- HOME PAGE -->
               <b-nav-item 
@@ -48,7 +48,7 @@
                 v-if="!isLoggedIn"
               >
                 <b-icon 
-                  :icon="$route.path === '/about' ? 'person-check-fill' : 'person-check'">
+                  :icon="$route.path === '/about' ? 'info-circle-fill' : 'info-circle'">
                 </b-icon> 
                 About
               </b-nav-item>
@@ -101,7 +101,7 @@
                 v-if="!isLoggedIn"
               >
                <b-icon 
-                :icon="$route.path === '/contacts' ? 'chat-square-dots-fill' : 'chat-square-dots'">
+                :icon="$route.path === '/contacts' ? 'chat-dots-fill' : 'chat-dots'">
               </b-icon>
                 Contacts
               </b-nav-item>
@@ -109,12 +109,12 @@
               <!-- PROFILE PAGE -->
               <b-nav-item 
                 href="#"
-                :class="$route.path === '/profile' ? 'active font-weight-bold' : ''"
-                to="/profile"
+                :class="$route.path === `/profile/${currentUserId}` ? 'active font-weight-bold' : ''"
+                :to="`/profile/${currentUserId}`"
                 v-if="isLoggedIn"
               >
                <b-icon 
-                :icon="$route.path === '/profile' ? 'person-fill' : 'person'">
+                :icon="$route.path === `/profile/${currentUserId}` ? 'person-fill' : 'person'">
               </b-icon>
                 Profile
               </b-nav-item>
@@ -154,7 +154,7 @@
 
 <script>
 
-  import { auth } from '@/services'
+  import { auth, currentUser } from '@/services'
 
   import { toastAlertStatus } from '@/utils'
 
@@ -162,8 +162,8 @@
     name: 'nav-bar',
 
     components: {
-      Register: () => import('@/views/Register'),
-      Login: () => import('@/views/Login')
+      Register: () => import('@/views/public/Register'),
+      Login: () => import('@/views/public/Login')
     },
     
     data () {
@@ -175,6 +175,9 @@
     computed: {
       isLoggedIn () {
         return auth.currentUser
+      },
+      currentUserId () {
+        return auth.currentUser.uid
       }
     },
 
@@ -200,6 +203,7 @@
 .top {
   background: white;
   border-bottom: 1px solid rgb(218, 217, 217);
+  border-top: 2px solid rgb(201, 201, 201);
 }
 
 .navbar {
@@ -208,14 +212,4 @@
     color: #445b66;
   }
 }
-
-// .navbar-toggler {
-//   border: none;
-//   background: none;
-// }
-// .navbar-toggler:focus {
-//   border: none;
-//   background: none;
-// }
-
 </style>

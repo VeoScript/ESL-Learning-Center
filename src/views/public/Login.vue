@@ -161,6 +161,7 @@
                         toastAlertStatus('Successfully Login', 'success')
                         this.$bvModal.hide('login-modal')
                         this.onClickResetForm ()
+                        this.$router.push('/dashboard')
                      })
                      .catch(error => {
                         this.loading = false
